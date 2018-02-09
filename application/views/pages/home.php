@@ -57,7 +57,7 @@
 							<p></p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="assets/images/nodp.png" alt="">
+									<img src="assets/images/noimage.png" alt="">
 								</div>
 								<div class="client-name">
 									<h2></h2>
@@ -71,7 +71,7 @@
 							<p></p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="assets/images/nodp.png" alt="">
+									<img src="assets/images/noimage.png" alt="">
 								</div>
 								<div class="client-name">
 									<h2></h2>
@@ -85,7 +85,7 @@
 							<p></p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="assets/images/nodp.png" alt="">
+									<img src="assets/images/noimage.png" alt="">
 								</div>
 								<div class="client-name">
 									<h2></h2>
@@ -99,7 +99,7 @@
 							<p></p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="assets/images/nodp.png" alt="">
+									<img src="assets/images/noimage.png" alt="">
 								</div>
 								<div class="client-name">
 									<h2></h2>
@@ -113,7 +113,7 @@
 							<p></p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="assets/images/nodp.png" alt="">
+									<img src="assets/images/noimage.png" alt="">
 								</div>
 								<div class="client-name">
 									<h2></h2>
@@ -127,7 +127,7 @@
 							<p></p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="assets/images/nodp.png" alt="">
+									<img src="assets/images/noimage.png" alt="">
 								</div>
 								<div class="client-name">
 									<h2></h2>

@@ -14,4 +14,3 @@
 	</div>
 	<!-- Page header end -->
 
-	<hr/>
