@@ -13,7 +13,6 @@ html,
 body {
 	height: 100%;
 	font-family: "Roboto", sans-serif;
-	background-image: url("assets/images/bg.gif");
 }
 
 img {
@@ -398,7 +397,7 @@ ul {
 --------------------------*/
 .about-section,
 .team-section {
-	background: #6a23b5;
+	background: #fff;
 	position: relative;
 	z-index: 2;
 }
@@ -842,12 +841,12 @@ ul {
 	Footer section
 --------------------------*/
 .footer-section {
-	background: #220c3b;
+	background: #ddd;
 	text-align: center;
 }
 
 .footer-section h2 {
-	color: #6a23b5;
+	color: #fff;
 	font-size: 14px;
 	padding: 18px 0;
 }
@@ -862,7 +861,7 @@ ul {
 .page-top-section {
 	position: relative;
 	height: 405px;
-	background: #6a23b5;
+	background: #ddd;
 }
 
 .page-top-section .container {
