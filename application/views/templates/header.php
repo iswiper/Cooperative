@@ -15,12 +15,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css"/>
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="assets/css/bootstrap1.css"/>
+	<link rel="stylesheet" href="assets/css/font-awesome1.css"/>
 	<link rel="stylesheet" href="assets/css/flaticon.css"/>
 	<link rel="stylesheet" href="assets/css/magnific-popup.css"/>
 	<link rel="stylesheet" href="assets/css/owl.carousel.css"/>
-	<link rel="stylesheet" href="assets/css/style.css"/>
+	<link rel="stylesheet" href="assets/css/style1.css"/>
 
 
 	<!--[if lt IE 9]>
@@ -35,13 +35,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="logo">
-			<img src="assets/images/logo2.jpg" alt=""><!-- Logo -->
+			<img src="assets/images/logo2.jpg" alt="">  <!---################REPLACE THIS WITH ANOTHER LOGO#######################------->
 		</div>
 		<!-- Navigation -->
 		<div class="responsive"><i class="fa fa-bars"></i></div>
-		<nav>
+		<nav class="navbar-default navbar-fixed-top">
 			<ul class="menu-list">
-				<li class="active"><a href="<?php echo base_url(); ?>home"><i class="fa fa-home"></i>Home</a></li>
+				
+				<li><a href="<?php echo base_url(); ?>home"><i class="fa fa-home"></i>Home</a></li>
 				<li><a href="<?php echo base_url(); ?>contact"><i class="fa fa-phone"></i>Contact</a></li>
 				<li><a href="<?php echo base_url(); ?>about"><i class="fa fa-info"></i>About Us</a></li>
 				<li><a href="<?php echo base_url(); ?>"><i class="fa fa-user"></i>Log in</a></li>
