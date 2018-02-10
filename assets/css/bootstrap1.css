@@ -3333,7 +3333,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
     margin-right: 0;
 }
 }.navbar-default {
-    background-color: #f8f8f8;
+    background-color: #297D71;   /*############navbar color############*/
     border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {

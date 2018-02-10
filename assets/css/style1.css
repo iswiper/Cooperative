@@ -12,6 +12,7 @@
 html,
 body {
 	height: 100%;
+	
 	font-family: "Roboto", sans-serif;
 }
 
@@ -28,6 +29,7 @@ h6 {
 	font-family: "Oswald", sans-serif;
 	padding: 0;
 	margin: 0;
+
 }
 
 h2 {
@@ -45,7 +47,7 @@ a:hover,
 a:focus {
 	text-decoration: none;
 	outline: none;
-	color: #0b1033;
+	color: #000;
 }
 
 li,
@@ -54,6 +56,19 @@ ul {
 	padding: 0;
 }
 
+
+.homeintro{
+	
+	width: 100%;
+	height: 1000px;
+	background: #7B7977;
+	
+}
+.homeintro2{
+	width: 100%;
+	padding-top:70px;
+	margin:10px;
+}
 /*------------------------
 	Helper css
 --------------------------*/
@@ -121,10 +136,10 @@ ul {
 }
 
 .section-title h2 span {
-	background: #2be6ab;
+	background: #297D71;
 	padding: 0 3px 5px;
 	display: inline-block;
-	color: #0b1033;
+	color: #fff;
 }
 
 .section-title:after {
@@ -158,10 +173,10 @@ ul {
 .site-btn {
 	font-family: "Oswald", sans-serif;
 	font-size: 15px;
-	color: #641fb1;
+	color: #fff;
 	display: inline-block;
 	text-transform: uppercase;
-	background: #2be6ab;
+	background: #028482;
 	padding: 15px 50px;
 	font-weight: 500;
 	letter-spacing: 1px;
@@ -290,7 +305,7 @@ ul {
 	display: inline-block;
 	padding: 35px 15px;
 	margin-right: 15px;
-	color: #222;
+	color: #000;
 	position: relative;
 	font-family: "Roboto", sans-serif;
 	font-size: 15px;
@@ -301,8 +316,13 @@ ul {
 }
 
 .header-section .menu-list li a:hover,
-.header-section .menu-list li a.active {
-	color: #6a23b5;
+.header-section .menu-list li a:active {
+	color: #fff;
+}
+
+.header-section .menu-list li a:focus{
+	
+	color: #fff;
 }
 
 .header-section .menu-list li:last-child a {
@@ -311,12 +331,13 @@ ul {
 
 .header-section .menu-list li.active a {
 	background: #2be6ab;
-	color: #6a23b5;
+	color: #ddd;
 }
 
 .header-section .menu-list .current a:after {
 	width: 10px;
 	margin-left: -5px;
+	
 }
 
 /*------------------------
@@ -360,7 +381,7 @@ ul {
 	display: inline-block;
 	height: 50px;
 	width: 100px;
-	background: #6a23b5;
+	background: #297D71;
 	color: #fff;
 	text-align: center;
 	padding-top: 10px;
@@ -370,7 +391,7 @@ ul {
 
 .owl-carousel .owl-nav .owl-prev:hover,
 .owl-carousel .owl-nav .owl-next:hover {
-	background: #2be6ab;
+	background: #637675;
 }
 
 .owl-carousel .owl-nav .owl-next {
@@ -381,7 +402,7 @@ ul {
 	width: 0%;
 	max-width: 100%;
 	height: 4px;
-	background: #2be6ab;
+	background: #297D71;
 }
 
 .owl-carousel #progressBar {
@@ -397,7 +418,7 @@ ul {
 --------------------------*/
 .about-section,
 .team-section {
-	background: #fff;
+	background: #637675;
 	position: relative;
 	z-index: 2;
 }
@@ -709,12 +730,12 @@ ul {
 	font-size: 24px;
 	font-weight: 400;
 	margin-bottom: 20px;
-	color: #000;
+	color: #fff;
 }
 
 .member h3 {
 	font-size: 14px;
-	color: #2be6ab;
+	color: #000;
 	font-weight: 400;
 	text-transform: uppercase;
 }
@@ -762,7 +783,7 @@ ul {
 	height: 100%;
 	right: -15px;
 	top: 0;
-	background: #6a23b5;
+	background: #637675;
 	z-index: -1;
 }
 
@@ -841,8 +862,9 @@ ul {
 	Footer section
 --------------------------*/
 .footer-section {
-	background: #ddd;
+	background: #353939;
 	text-align: center;
+	height:100px;
 }
 
 .footer-section h2 {
@@ -860,8 +882,8 @@ ul {
 --------------------------*/
 .page-top-section {
 	position: relative;
-	height: 405px;
-	background: #ddd;
+	height: 300px;
+	background: #028482;
 }
 
 .page-top-section .container {
