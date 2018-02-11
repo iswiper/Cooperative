@@ -132,9 +132,9 @@ $fname_err = $lname_err = $username_err = $password_err = $cpassword_err = $gend
 		
 		
 		else{
-			mysqli_query($connections, "INSERT INTO customertbl(first_name,last_name,gender,mobile,username,password,account_type) 
+			mysqli_query($connections, "INSERT INTO customertbl(first_name,last_name,gender,mobile,username,password) 
 			
-			VALUES('$fname','$lname','$gender','$digit','$username','$cpassword','2')");
+			VALUES('$fname','$lname','$gender','$digit','$username','$cpassword')");
 			
 			echo "<script language = 'javascript'>alert('New Record has been Added')</script>";
 			echo "<script language>window.location.href='Index.php';</script>";
