@@ -41,11 +41,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="responsive"><i class="fa fa-bars"></i></div>
 		<nav class="navbar-default navbar-fixed-top">
 			<ul class="menu-list">
-				
 				<li><a href="<?php echo base_url(); ?>home"><i class="fa fa-home"></i>Home</a></li>
 				<li><a href="<?php echo base_url(); ?>contact"><i class="fa fa-phone"></i>Contact</a></li>
 				<li><a href="<?php echo base_url(); ?>about"><i class="fa fa-info"></i>About Us</a></li>
-				<li><a href="<?php echo base_url(); ?>"><i class="fa fa-user"></i>Log in</a></li>
+				<li><a href="<?php echo site_url('Pages/login'); ?>"><i class="fa fa-user"></i>Log in</a></li>
 			</ul>
 		</nav>
 	</header>
