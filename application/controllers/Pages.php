@@ -15,9 +15,11 @@
 			
 		}
 		public function register(){
+			//$this->load->view('templates/header');
 			$this->load->view('register_view');
 		}
 		public function login(){
+			//$this->load->view('templates/header');
 			$this->load->view('login_view');
 		} 
 	}
