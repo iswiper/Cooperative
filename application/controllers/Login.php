@@ -11,14 +11,22 @@
     }
     
     public function process(){
-    $data = array(
-    $this->load->model('login_model');
-    $username = $this->input->post('username');
-    $password = $this->input->post('password');
-        if($this->login_model->login($username,$password))
-            echo "Welcome, "+username;
-        else
-            echo "Something Went Wrong :(";
-    } 
-  }
+        $this->load->model('login_model');
+        $result = $this->login_model->getCustomer();
+        if(! $result){
+            $this->load->model('login_model');
+            $result = $this->login_model->getAdmin();
+            if(! $result){
+                $msg = 'Invalid username or password';
+                $base=base_url();
+                echo $msg;
+             }
+            else{
+                echo "Welcome Admin!!";
+            }
+        }
+        else{
+                echo "Welcome Customer!!";
+        }
+  }}
 ?>
