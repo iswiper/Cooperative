@@ -1,51 +1,60 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Consumer Cooperative Solution</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Consumer Cooperative Solution">
-	<meta name="keywords" content="lab, onepage, creative, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link href="assets/images/favicon.ico" rel="shortcut icon"/>
+  <meta charset="utf-8">
+  <title>Cooperative</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
+  <!-- Favicons -->
+  
+  <link href="<?php echo base_url();?>assets/img/favicon.png" rel="icon">
+  
+  <link href="<?php echo base_url();?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/css/bootstrap1.css"/>
-	<link rel="stylesheet" href="assets/css/font-awesome1.css"/>
-	<link rel="stylesheet" href="assets/css/flaticon.css"/>
-	<link rel="stylesheet" href="assets/css/magnific-popup.css"/>
-	<link rel="stylesheet" href="assets/css/owl.carousel.css"/>
-	<link rel="stylesheet" href="assets/css/style1.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
+  <!-- Bootstrap CSS File -->
+  <link href="<?php echo base_url();?>assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+  <!-- Libraries CSS Files -->
+  <link href="<?php echo base_url();?>assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  
+  <link href="<?php echo base_url();?>assets/lib/animate/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
+
 
 </head>
-<body>
-	
 
-	<!-- Header section -->
-	<header class="header-section">
-		<div class="logo">
-			<img src="assets/images/logo2.jpg" alt="">  <!---################REPLACE THIS WITH ANOTHER LOGO#######################------->
-		</div>
-		<!-- Navigation -->
-		<div class="responsive"><i class="fa fa-bars"></i></div>
-		<nav class="navbar-default navbar-fixed-top">
-			<ul class="menu-list">
-				<li><a href="<?php echo base_url(); ?>home"><i class="fa fa-home"></i>Home</a></li>
-				<li><a href="<?php echo base_url(); ?>contact"><i class="fa fa-phone"></i>Contact</a></li>
-				<li><a href="<?php echo base_url(); ?>about"><i class="fa fa-info"></i>About Us</a></li>
-				<li><a href="<?php echo site_url('Pages/login'); ?>"><i class="fa fa-user"></i>Log in</a></li>
-			</ul>
-		</nav>
-	</header>
-	<!-- Header section end -->
+<body>
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+		<h1><a href="#hero">Cooperative</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+		  <li><a href="#team">Signup</a></li>
+		  <li><a href="#team">Signin</a></li>
+		  
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  
+  
