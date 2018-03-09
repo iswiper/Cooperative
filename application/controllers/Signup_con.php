@@ -3,9 +3,9 @@ class Signup_con extends CI_Controller {
 	
 		
 	public function Signup(){
-				$this->load->view('templates/header');
+				$this->load->view('templates/signupheader');
 				$this->load->view('Signup');
-				$this->load->view('templates/footer');
+				$this->load->view('templates/signupfooter');
 			
 	}
 
