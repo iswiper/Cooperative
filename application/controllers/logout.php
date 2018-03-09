@@ -5,9 +5,9 @@ class Logout extends CI_Controller {
 		$this->session->unset_userdata($data);
 		$this->session->set_flashdata('successMessage','<div class="alert alert-success">Logout Successfully</div>');
 		
-				$this->load->view('templates/header');
-				$this->load->view('home');
-				$this->load->view('templates/footer');
+				$this->load->view('header');
+				$this->load->view('login');
+				$this->load->view('footer');
 	}
 }
 

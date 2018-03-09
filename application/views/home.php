@@ -14,8 +14,8 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact Us</a></li>
-		  <li><a href="<?php echo base_url(); ?>/login">Login</a></li>
-		  <li><a href="<?php echo base_url(); ?>/Signup">Register</a></li>
+		  <li><a href="<?php echo base_url(); ?>login">Login</a></li>
+		  <li><a href="<?php echo base_url(); ?>Signup">Register</a></li>
 		  
 
         </ul>
