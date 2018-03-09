@@ -16,7 +16,7 @@ class Item extends CI_Controller {
 				$name = $this->input->post('item_name');
 				$category = $this->input->post('category');
 				$description = $this->input->post('description');
-				$creator = 'admin';
+				$creator = 'Cooperative Company';
 				$quantity = 0;
 				$price = $this->input->post('price');
 				$this->form_validation->set_rules('item_name', 'Item Name', 'required|min_length[3]');

@@ -16,7 +16,7 @@ class Category Extends CI_Controller {
 			$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Category Must Not More Than 50 Characters!</div>');
 			redirect(base_url('categories'));
 		}else {
-			$creator = 'admin';
+			$creator = 'Cooperative Company';
 			$this->load->model('database');
 			$this->database->insertCategory($category, $creator);
 		}

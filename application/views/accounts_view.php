@@ -21,7 +21,6 @@
 	<select name="account_type" class="form-control">
 		<option>Admin</option>
 		<option>Cashier</option>
-		<option>Clerk</option>
 	</select>
 </div>
 <div class="form-group">

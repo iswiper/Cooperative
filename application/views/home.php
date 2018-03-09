@@ -14,8 +14,8 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact Us</a></li>
-		  <li><a href="<?php echo base_url(); ?>/login">Login</a></li>
-		  <li><a href="<?php echo base_url(); ?>/Signup">Register</a></li>
+		  <li><a href="<?php echo base_url(); ?>login">Login</a></li>
+		  <li><a href="<?php echo base_url(); ?>Signup">Register</a></li>
 		  
 
         </ul>
@@ -31,7 +31,7 @@
     <div class="hero-container">
       <h1>Welcome to Cooperative</h1>
       <h2>A website to purchase goods in afforadable price.</h2>
-      <a href="<?php echo base_url(); ?>/login" class="btn-get-started">Get Started</a>
+      <a href="<?php echo base_url(); ?>login" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- #hero -->
 
@@ -92,7 +92,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/v.jpg" alt=""></div>
+              <div class="pic"><img src="assets/Home/img/v.jpg" alt=""></div>
               <h4>Venjie Mendez</h4>
               <span>Back-end Developer</span>
               <div class="social">
@@ -106,7 +106,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/l.jpg" alt=""></div>
+              <div class="pic"><img src="assets/Home/img/l.jpg" alt=""></div>
               <h4>Lyle Angeline Paulo</h4>
               <span>Back-end Developer</span>
               <div class="social">
@@ -120,7 +120,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/r.jpg" alt=""></div>
+              <div class="pic"><img src="assets/Home/img/r.jpg" alt=""></div>
               <h4>Mary Rose Apoyon</h4>
               <span>Front-end Developer</span>
               <div class="social">
@@ -134,7 +134,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/ed.jpg" alt=""></div>
+              <div class="pic"><img src="assets/Home/img/ed.jpg" alt=""></div>
               <h4>Edward Vincent Anabo</h4>
               <span>Back-end Developer</span>
               <div class="social">
@@ -148,7 +148,7 @@
 			
 			<div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/j.jpg" alt=""></div>
+              <div class="pic"><img src="assets/Home/img/j.jpg" alt=""></div>
               <h4>Janine Sabado</h4>
               <span>Front-end Developer</span>
               <div class="social">
@@ -162,7 +162,7 @@
 		  
 		  <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/m.jpg" alt=""></div>
+              <div class="pic"><img src="assets/Home/img/m.jpg" alt=""></div>
               <h4>Michael Lawrence Cruz</h4>
               <span>Front-end Developer</span>
               <div class="social">
@@ -176,7 +176,7 @@
 		  
 		  <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/e.jpg" alt=""></div>
+              <div class="pic"><img src="assets/Home/img/e.jpg" alt=""></div>
               <h4>Elijah Estrella</h4>
               <span>Quality Assurance Tester</span>
               <div class="social">

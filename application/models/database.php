@@ -26,7 +26,7 @@ class Database extends CI_Model {
 	public function insertCategory ($categoryName, $creator) {
 		$this->load->database();
 		$this->load->model('database');
-		$creator = 'admin';
+		$creator = 'Cooperative Company';
 		$date_time = $this->getDateTime();
 
 		$data = array(

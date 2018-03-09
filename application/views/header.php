@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php if(isset($page_name)) {echo $page_name .' - Sales And Inventory System';} else echo "Dashboard - POS SALES AND INVENTORY SYSTEM" ?></title>
+	<title><?php if(isset($page_name)) {echo $page_name .' - Sales And Inventory System';} else echo "Cooperative" ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome-4.7.0/css/font-awesome.css'); ?>">
@@ -27,7 +27,7 @@
 	?>
 	
 	<div style="padding-left: 20px; padding-top: 2px;">
-		<h2 style="margin: 0">Cooperative</h2>
+		<h2><a href="<?php echo base_url(); ?>pages/home">Cooperative</a></h2>
 		<p style="margin: 0;"> </p>
 	</div>
 </header>
