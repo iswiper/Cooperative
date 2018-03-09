@@ -67,7 +67,7 @@ class Pages extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function lagout () {
+	public function logout () {
 		echo 'logout';
 	}
 }

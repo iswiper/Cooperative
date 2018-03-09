@@ -21,7 +21,7 @@ class Accounts_con extends CI_Controller {
 			$username = $this->input->post('Username');
 			$password = $this->input->post('Password');
 			$account_type = $this->input->post('account_type');
-			$created_by = 'admin';
+			$created_by = 'Cooperative Company';
 			$exec = $this->accounts_model->insert_account($username,$password,$account_type,$date_created,$created_by);
 			if ($exec) {
 				$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Account Created Successfully</div>');

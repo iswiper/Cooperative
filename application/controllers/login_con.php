@@ -1,7 +1,7 @@
 <?php 
 class Login_con extends CI_Controller {
 
-	public function Home(){
+	public function Login(){
 				$this->load->view('header');
 				$this->load->view('login');
 				$this->load->view('footer');
@@ -36,8 +36,6 @@ class Login_con extends CI_Controller {
 					if ($this->session->userdata('account_type') == "Cashier") {
 						redirect(base_url('pos'));
 					}else if ($this->session->userdata('account_type') == "Admin") {
-						redirect(base_url('inventory'));
-					}else if ($this->session->userdata('account_type') == "Clerk") {
 						redirect(base_url('inventory'));
 					}
 				}else {
