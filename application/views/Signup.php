@@ -36,13 +36,14 @@
 				
 					<div class="col-sm-10" id="main" style="padding-top: 20px;">
 					<div class="col-sm-4">
+					
+					<?php echo $this->session->flashdata('errorMessage');?>
+					<?php echo $this->session->flashdata('successMessage');?>
+					<?php echo form_open('Signup_con/register_customer'); ?>	
+					<?php echo form_fieldset('<h1 class="text-danger">Register Account</h1>'); ?>
 				
 					
-					
-					<div class="form-group">
-					<label for='Username'>Company Name</label>
-						<input type="text" name="Username" class="form-control">
-					</div>
+				
 					
 					<div class="form-group">
 						<label for='Username'>Username</label>
@@ -76,12 +77,7 @@
 
 </div>
 </div>
-	  
-	  
-	  
-	  
-	  
-    </div>
+</div>
   </section><!-- #hero -->
 
   <main id="main">

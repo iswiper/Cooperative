@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>POS</title>
+	<title>Cooperative</title>
+
+	<!-- Favicons -->
+  
+	<link href="<?php echo base_url();?>assets/Home/img/favicon.png" rel="icon">
+  
+	<link href="<?php echo base_url();?>assets/Home/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/pos_style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('assets/jquery.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/jquery-ui/jquery-ui.js') ?>"></script>
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var total = sessionStorage.getItem('total');
@@ -37,8 +46,8 @@
 <body>
 <header style="margin-bottom: 40px;color: white;">
 <div style="padding-left: 20px; padding-top: 2px;">
-		<h2 style="margin: 0">Consumer Cooperative System</h2>
-		<p style="margin: 0;">Editor</p>
+		<h2 style="margin: 0">Cooperative</h2>
+	
 	</div>
 </header>
 <div class="main">

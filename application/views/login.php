@@ -4,6 +4,7 @@
 <?php echo $this->session->flashdata('errorMessage') ?>
 <?php echo $this->session->flashdata('successMessage') ?>
 <?php echo form_open('login_con/login_validation') ?>
+<?php echo form_open('adminlogin_con/login_validation') ?>
 <?php echo form_fieldset('Login user'); ?>
 <div class="input-group form-group">
 	<span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>

@@ -20,7 +20,7 @@ class Accounts_con extends CI_Controller {
 			$date_created = $this->database->getDateTime();
 			$username = $this->input->post('Username');
 			$password = $this->input->post('Password');
-			$account_type = $this->input->post('account_type');
+			$account_type = 'Admin';
 			$created_by = 'Cooperative Company';
 			$exec = $this->accounts_model->insert_account($username,$password,$account_type,$date_created,$created_by);
 			if ($exec) {

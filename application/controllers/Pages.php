@@ -10,20 +10,13 @@ class Pages extends CI_Controller {
 	}
 	
 	
-		
-	public function Signup(){
-				$this->load->view('templates/header');
-				$this->load->view('Signup');
-				$this->load->view('templates/footer');
-			
-	}
-
+	
 	
 	public function inventory () {
 		$this->load->model('database');
 		$data['items'] = $this->database->itemList();
 		$data['page'] = 'inventory';
-		$this->load->view('header',$data);
+		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');
 		$this->load->view('main',$data);
 		$this->load->view('footer');
