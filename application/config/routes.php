@@ -18,4 +18,4 @@ $route['weekly_sales_report'] = 'sales_con/weekly_sales_report';
 $route['monthly_sales_report'] = 'sales_con/monthly_sales_report';
 $route['yearly_sales_report'] = 'sales_con/yearly_sales_report';
 $route['login'] = 'login_con/Login';
-$route['Home'] = 'Home_con/home';
+$route['Signup'] = 'Signup_con/Signup';

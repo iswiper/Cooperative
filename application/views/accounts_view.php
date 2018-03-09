@@ -17,11 +17,8 @@
 	<input type="password" name="repeat_password" class="form-control">
 </div>
 <div class="form-group">
-	<label for='account_type'>Account Type</label>
-	<select name="account_type" class="form-control">
-		<option>Admin</option>
-		<option>Cashier</option>
-	</select>
+	<label for='account_type'>Account Type: Admin</label>
+	
 </div>
 <div class="form-group">
 	<input type="submit" name="submit_account" class="btn btn-success" value="Register">
@@ -49,7 +46,6 @@
 			?>
 			<td><?php echo $count++; ?></td>
 			<td><?php echo $account->username ?></td>
-			<td><?php echo $account->account_type ?></td>
 			<td><?php echo $account->date_created ?></td>
 			<td><a href="<?php echo base_url("accounts_con/delete/$id"); ?>" class="btn btn-danger">Delete</a></td>
 		</tr>

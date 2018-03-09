@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Consumer Cooperative Solution</title>
+	<title>Cooperative</title>
+	
+	<!-- Favicons -->
+  
+  <link href="<?php echo base_url();?>assets/Home/img/favicon.png" rel="icon">
+  
+  <link href="<?php echo base_url();?>assets/Home/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/pos_style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('assets/jquery.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/jquery-ui/jquery-ui.js') ?>"></script>
 	<script type="text/javascript">
+	
+	
+	
 		$( document ).ready(function() {
 			var list = {
 						
@@ -100,10 +111,11 @@
 <body>
 <header style="height: 60px; background: #2d2626; color: white;" class="">
 
+
+
 <a href="<?php echo base_url('logout/out') ?>"><button style="float: right; margin-top: 6px; margin-right: 20px;" class="btn btn-primary btn-lg" >Sign Out</button></a>
 	<div style="padding-left: 20px; padding-top: 2px;">
-		<h2 style="margin: 0">Consumer Cooperative Solution</h2>
-		<p style="margin: 0;">By: Blackie</p>
+		
 	</div>
 </header>
 <div class="main">
