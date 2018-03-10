@@ -16,7 +16,7 @@
 	
 </head>
 <body>
-<header style="height: 60px; background: #2d2626; color: white;" class="">
+<header style="height: 70px; background: #343a40; color: white;" class="">
 	<?php
 		$cur_date = date('l, F Y');
 		if ($this->session->userdata('log_in')) {
@@ -26,9 +26,8 @@
 		}
 	?>
 	
-	<div style="padding-left: 20px; padding-top: 2px;">
-		<h2><a href="<?php echo base_url(); ?>pages/home">Cooperative</a></h2>
-		<p style="margin: 0;"> </p>
+	<div style="padding-left: 20px; padding-top: 1px;">
+		<h2><a style="color: white; font-size: 35px; text-decoration: none;"href="<?php echo base_url(); ?>pages/home">Cooperative</a></h2>
 	</div>
 </header>
 <div class="row" style="margin-bottom: -10px;">

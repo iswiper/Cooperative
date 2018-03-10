@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2018 at 12:51 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.2.0
+-- Generation Time: Mar 09, 2018 at 09:03 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -72,6 +72,9 @@ INSERT INTO `category` (`id`, `date_time`, `category`, `creator`) VALUES
 
 CREATE TABLE `customer` (
   `id` int(11) NOT NULL,
+  `first_name` varchar(25) NOT NULL,
+  `last_name` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(300) NOT NULL,
   `date_created` varchar(100) NOT NULL
@@ -81,9 +84,11 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id`, `username`, `password`, `date_created`) VALUES
-(16, 'pedro', '$2y$10$r03imqpNSCXfVhnnpqoutu0HiB/EYr8mkJ.HO9jGfmeae/LIwBtt.', '2018-03-09 05:22:45 pm'),
-(17, 'pablo ', '$2y$10$Ma8zE05Yl6EdsU9iOpYYgOFPMZkYRK0ObrEEnq/5bFTVhpZQHMxoy', '2018-03-09 05:53:25 pm');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `username`, `password`, `date_created`) VALUES
+(16, '', '', '', 'pedro', '$2y$10$r03imqpNSCXfVhnnpqoutu0HiB/EYr8mkJ.HO9jGfmeae/LIwBtt.', '2018-03-09 05:22:45 pm'),
+(17, '', '', '', 'pablo ', '$2y$10$Ma8zE05Yl6EdsU9iOpYYgOFPMZkYRK0ObrEEnq/5bFTVhpZQHMxoy', '2018-03-09 05:53:25 pm'),
+(18, '', '', '', 'hello', '$2y$10$Di7txGJdXh7R31XXsC/NpupmpAQTll12hG7fpExP7ebyQVzgZkM2y', '2018-03-10 03:53:37 am'),
+(19, 'qwertyuiop', 'qwertyuiop', 'bona@gmail.com', 'bona@gmail.com', '$2y$10$zYeLIuWT/R8r9GwF3c3Hm.TdAZfyU6x6TFgRb7EmHHnw4xizt7Y2K', '2018-03-10 04:02:44 am');
 
 -- --------------------------------------------------------
 
@@ -191,7 +196,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `items`
