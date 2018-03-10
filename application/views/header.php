@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 	<title><?php if(isset($page_name)) {echo $page_name .' - Sales And Inventory System';} else echo "Cooperative" ?></title>
