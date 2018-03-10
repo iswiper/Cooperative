@@ -6,5 +6,7 @@
 		<p><br>&copy; Copyright 2017 <strong>Cooperative</strong> | All Rights Reserverd <br> <br>  </p>
 	</div>
 </footer>
+
+		
 </body>
 </html>

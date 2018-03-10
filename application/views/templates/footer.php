@@ -26,6 +26,13 @@
   <script src="<?php echo base_url();?>assets/Home/lib/counterup/counterup.min.js"></script>
   <script src="<?php echo base_url();?>assets/Home/lib/superfish/hoverIntent.js"></script>
   <script src="<?php echo base_url();?>assets/Home/lib/superfish/superfish.min.js"></script>
+  
+  <!-- login Form JavaScript File -->
+  <script src="<?php echo base_url();?>assets/login/js/jquery-1.11.1.min.js"></script>
+        <script src="<?php echo base_url();?>assets/login/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url();?>assets/login/js/jquery.backstretch.min.js"></script>
+        <script src="<?php echo base_url();?>assets/login/js/scripts.js"></script>
+  
 
   <!-- Contact Form JavaScript File -->
   <script src="<?php echo base_url();?>assets/Home/contactform/contactform.js"></script>

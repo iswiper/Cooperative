@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <title>Cooperative</title>
 
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Modal Login Form Template</title>
+
 
   <!-- Favicons -->
   
@@ -27,6 +29,14 @@
 
   <!-- Main Stylesheet File -->
   <link href="<?php echo base_url();?>assets/Home/css/style.css" rel="stylesheet">
+  
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/login/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/login/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/login/css/form-elements.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/login/css/style.css" rel="stylesheet">
+	
+  
 
 
 </head>
