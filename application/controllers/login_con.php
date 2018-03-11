@@ -1,13 +1,6 @@
 <?php 
 class Login_con extends CI_Controller {
 
-	public function Login(){
-				$this->load->view('header');
-				$this->load->view('login');
-				$this->load->view('footer');
-			
-	}
-	
 	
 
 	public function login_validation() {
@@ -17,7 +10,7 @@ class Login_con extends CI_Controller {
 		$this->form_validation->set_rules('password','Password', 'required');
 		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('errorMessage','<div class="alert alert-danger">' . validation_errors() . '</div>');
-			redirect(base_url('login'));
+			redirect(base_url('Pages/home'));
 		}else {
 		
 			$this->load->model('accounts_model');
@@ -43,7 +36,7 @@ class Login_con extends CI_Controller {
 					
 			}else {
 					$this->session->set_flashdata('errorMessage','<div class="alert alert-danger">Incorrect Login Name Or Password</div>');
-				redirect(base_url('login'));
+				redirect(base_url('Pages/home'));
 				}
 			}
 			
@@ -68,14 +61,14 @@ class Login_con extends CI_Controller {
 				
 				else {
 					$this->session->set_flashdata('errorMessage','<div class="alert alert-danger">Incorrect Login Name Or Password</div>');
-				redirect(base_url('login'));
+				redirect(base_url('Pages/home'));
 				}
 			}
 			
 			
 			else {
 				$this->session->set_flashdata('errorMessage','<div class="alert alert-danger">Incorrect Login Name Or Password</div>');
-				redirect(base_url('login'));
+				redirect(base_url('Pages/home'));
 			}
 		}
 	}

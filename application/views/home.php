@@ -1,3 +1,5 @@
+<?php echo form_open('login_con/login_validation') ?>
+<?php echo form_open('adminlogin_con/login_validation') ?>
  <!--==========================
   Header
   ============================-->
@@ -13,8 +15,8 @@
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-		  <li><a href="<?php echo base_url(); ?>login">Login</a></li>
+          <li><a href="#services">Services</a></li>
+		  <li><a href="#contact" class="launch-modal" data-modal-id="modal-login">Login</a></li>
 		  <li><a href="<?php echo base_url(); ?>Signup">Register</a></li>
 		  
 
@@ -24,6 +26,9 @@
   </header><!-- #header -->
   
   
+  
+  
+  
  <!--==========================
     Hero Section
   ============================-->
@@ -31,10 +36,50 @@
     <div class="hero-container">
       <h1>Welcome to Cooperative</h1>
       <h2>A website to purchase goods in afforadable price.</h2>
-      <a href="<?php echo base_url(); ?>/login" class="btn-get-started">Get Started</a>
+      <a class="btn-get-started launch-modal" data-modal-id="modal-login">Get Started</a>
+	  
     </div>
   </section><!-- #hero -->
 
+  
+ <!--==========================
+  login modal Section
+  ============================-->
+  <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        				
+        			</div>
+        			
+        			<div class="modal-body">
+        				
+	                    <form role="form" action="" method="post" class="login-form">
+	                    	<div class="input-group form-group">
+								<span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
+								<input id="username" type="text" class="form-control input-lg" name="username" placeholder="Username">
+							</div>
+	                        <div class="input-group form-group">
+								<span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
+								<input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
+							</div>
+	                        <div class="form-group">
+								<input type="submit" name="login" class="btn btn-primary input-lg form-control"  ="Login">
+							</div>
+							<?php echo form_close() ?>	
+	                    </form>
+	                    
+        			</div>
+        			
+        		</div>
+        	</div>
+        </div><!-- #login modal -->
+  
+  
   <main id="main">
 
       <!--==========================
@@ -241,4 +286,4 @@
     
   </main>
 
-	
+	                                        

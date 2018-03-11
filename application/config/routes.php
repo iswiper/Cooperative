@@ -17,5 +17,4 @@ $route['daily_sales_report'] = 'sales_con/daily_sales_report';
 $route['weekly_sales_report'] = 'sales_con/weekly_sales_report';
 $route['monthly_sales_report'] = 'sales_con/monthly_sales_report';
 $route['yearly_sales_report'] = 'sales_con/yearly_sales_report';
-$route['login'] = 'login_con/Login';
 $route['Signup'] = 'Signup_con/Signup';
