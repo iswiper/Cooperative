@@ -1,15 +1,18 @@
 <?php
 
 class customer_model extends CI_Model {
-		public function insert_customer ($fname,$lname,$email,$username,$password,$date_created) {
+		public function insert_customer ($fname,$lname,$email,$num,$addr,$username,$password,$date_created) {
 		$encrypt_password = password_hash($password,PASSWORD_DEFAULT);
 		$data = array(
-			'first_name'=> "$fname",
-     		'last_name' => "$lname",
-      		'email'     => "$email", 
-      		'username'  => "$email", 
-    		'password' => "$encrypt_password",
- 			'date_created' => "$date_created",
+			'first_name'	=> "$fname",
+     		'last_name' 	=> "$lname",
+      		'email'     	=> "$email", 
+      		'phone'    	 	=> "$num", 
+      		'address'  		=> "$addr", 
+      		//'birth'  		=> "$bday", 
+      		'username'  	=> "$username", 
+    		'password' 		=> "$encrypt_password",
+ 			'date_created'	=> "$date_created",
 		);
 		$this->load->database();
 		return $this->db->insert('customer', $data);

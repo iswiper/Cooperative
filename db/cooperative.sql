@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2018 at 09:03 PM
+-- Generation Time: Mar 11, 2018 at 08:11 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -75,6 +75,9 @@ CREATE TABLE `customer` (
   `first_name` varchar(25) NOT NULL,
   `last_name` varchar(25) NOT NULL,
   `email` varchar(25) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `birth` varchar(10) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(300) NOT NULL,
   `date_created` varchar(100) NOT NULL
@@ -84,11 +87,12 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `username`, `password`, `date_created`) VALUES
-(16, '', '', '', 'pedro', '$2y$10$r03imqpNSCXfVhnnpqoutu0HiB/EYr8mkJ.HO9jGfmeae/LIwBtt.', '2018-03-09 05:22:45 pm'),
-(17, '', '', '', 'pablo ', '$2y$10$Ma8zE05Yl6EdsU9iOpYYgOFPMZkYRK0ObrEEnq/5bFTVhpZQHMxoy', '2018-03-09 05:53:25 pm'),
-(18, '', '', '', 'hello', '$2y$10$Di7txGJdXh7R31XXsC/NpupmpAQTll12hG7fpExP7ebyQVzgZkM2y', '2018-03-10 03:53:37 am'),
-(19, 'qwertyuiop', 'qwertyuiop', 'bona@gmail.com', 'bona@gmail.com', '$2y$10$zYeLIuWT/R8r9GwF3c3Hm.TdAZfyU6x6TFgRb7EmHHnw4xizt7Y2K', '2018-03-10 04:02:44 am');
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `phone`, `address`, `birth`, `username`, `password`, `date_created`) VALUES
+(16, '', '', '', 0, '', '', 'pedro', '$2y$10$r03imqpNSCXfVhnnpqoutu0HiB/EYr8mkJ.HO9jGfmeae/LIwBtt.', '2018-03-09 05:22:45 pm'),
+(17, '', '', '', 0, '', '', 'pablo ', '$2y$10$Ma8zE05Yl6EdsU9iOpYYgOFPMZkYRK0ObrEEnq/5bFTVhpZQHMxoy', '2018-03-09 05:53:25 pm'),
+(18, '', '', '', 0, '', '', 'hello', '$2y$10$Di7txGJdXh7R31XXsC/NpupmpAQTll12hG7fpExP7ebyQVzgZkM2y', '2018-03-10 03:53:37 am'),
+(23, 'qwertyuiop', 'qwertyuiop', 'q@gmail.com', 2147483647, 'qwertyuiop', '', 'qwertyuiop', '$2y$10$FqVO087SI8425aTZ88Ftxew.ekkWp1ggi/syuETYF25gPf2MUjCNW', '2018-03-11 02:30:37 pm'),
+(24, 'qqqqqqqqqqqq', 'qqqqqqqqqqq', 'q@gmail.com', 2147483647, '11111111111111111111111111', 'Day', 'lkjhgfdsa', '$2y$10$4GWLTosFPKMDVZ9/CgUWZebUErVi1xMy4ab7mbe1Gv9WSqeeSzbSW', '2018-03-11 02:43:08 pm');
 
 -- --------------------------------------------------------
 
@@ -184,7 +188,7 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -196,7 +200,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `items`
