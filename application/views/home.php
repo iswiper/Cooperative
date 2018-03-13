@@ -1,5 +1,5 @@
 <?php echo form_open('login_con/login_validation') ?>
-<?php echo form_open('adminlogin_con/login_validation') ?>
+
  <!--==========================
   Header
   ============================-->
@@ -68,7 +68,7 @@
 								<input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
 							</div>
 	                        <div class="form-group">
-								<input type="submit" name="login" class="btn btn-primary input-lg form-control"  ="Login">
+								<input type="submit" name="login" class="btn btn-primary input-lg form-control">
 							</div>
 							<?php echo form_close() ?>	
 	                    </form>
