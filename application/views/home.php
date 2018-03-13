@@ -1,6 +1,4 @@
 <?php echo form_open('login_con/login_validation') ?>
-<?php echo form_open('adminlogin_con/login_validation') ?>
-<?php echo form_open('Signup_con/register_customer') ?>
 
  <!--==========================
   Header
@@ -9,7 +7,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-    <h1><a href="#hero">Cooperative</a></h1>
+		<h1><a href="#hero">Cooperative</a></h1>
       </div>
 
       <nav id="nav-menu-container">
@@ -18,10 +16,9 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#services">Services</a></li>
-      <li><a href="" class="launch-modal" data-modal-id="modal-login">Login</a></li>
-      <li><a href="" class="launch-modal" data-modal-id="modal-reg">Register</a></li>
-      <!--<li><a href="<?php echo base_url(); ?>Signup">Register</a></li>-->
-      
+		  <li><a href="#contact" class="launch-modal" data-modal-id="modal-login">Login</a></li>
+		  <li><a href="<?php echo base_url(); ?>Signup">Register</a></li>
+		  
 
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -40,7 +37,7 @@
       <h1>Welcome to Cooperative</h1>
       <h2>A website to purchase goods in afforadable price.</h2>
       <a class="btn-get-started launch-modal" data-modal-id="modal-login">Get Started</a>
-    
+	  
     </div>
   </section><!-- #hero -->
 
@@ -49,101 +46,38 @@
   login modal Section
   ============================-->
   <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              
-              <div class="modal-header">LOGIN
-                <button type="button" class="close" data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
-                
-              </div>
-              
-              <div class="modal-body">
-                
-                      <form role="form" action="" method="post" class="login-form">
-                        <div class="input-group form-group">
-                <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                <input id="username" type="text" class="form-control input-lg" name="username" placeholder="Username">
-              </div>
-                          <div class="input-group form-group">
-                <span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
-                <input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
-              </div>
-                          <div class="form-group">
-                <input type="submit" name="login" class="btn btn-primary input-lg form-control"  ="Login">
-              </div>
-              <?php echo form_close() ?>  
-                      </form>
-                      
-              </div>
-              
-            </div>
-          </div>
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        				
+        			</div>
+        			
+        			<div class="modal-body">
+        				
+	                    <form role="form" action="" method="post" class="login-form">
+	                    	<div class="input-group form-group">
+								<span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
+								<input id="username" type="text" class="form-control input-lg" name="username" placeholder="Username">
+							</div>
+	                        <div class="input-group form-group">
+								<span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
+								<input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
+							</div>
+	                        <div class="form-group">
+								<input type="submit" name="login" class="btn btn-primary input-lg form-control">
+							</div>
+							<?php echo form_close() ?>	
+	                    </form>
+	                    
+        			</div>
+        			
+        		</div>
+        	</div>
         </div><!-- #login modal -->
-  
-  <!--==========================
-  Register modal Section
-  ============================-->
-  <div class="modal fade" id="modal-reg" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
-                
-              </div>
-              
-              <div class="modal-body">
-                <?php echo $this->session->flashdata('errorMessage');?>
-                 <?php echo $this->session->flashdata('successMessage');?>
-                <form role="form" action="" method="post" class="login-form">
-
-                    <div class="input-group form-group ">
-                        <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                        <input id="First_Name" type="text" class="form-control input-lg" name="First_Name" placeholder="First Name">
-                        <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                        <input id="Last_Name" required="" type="text" class="form-control input-lg" name="Last_Name" placeholder="Last Name">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-phone " aria-hidden="true"></i></span>
-                        <input id="Phone" type="text" maxlength="11" class="form-control input-lg" name="Phone" placeholder="Phone">
-                    </div>
-                   
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="  fa fa-address-book " aria-hidden="true"></i></span>
-                        <input id="Address" type="text" class="form-control input-lg" name="Address" placeholder="Address">
-                    </div>
-                     <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-at " aria-hidden="true"></i></span>
-                        <input id="Email" type="email" class="form-control input-lg" name="Email" placeholder="Email Address">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                        <input id="Username" type="text" class="form-control input-lg" name="Username" placeholder="Username">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
-                        <input id="Password" type="password" class="form-control input-lg" name="Password" placeholder="Password">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
-                        <input id="repeat_password" type="password" class="form-control input-lg" name="repeat_password" placeholder="Confirm Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="signup" class="btn btn-primary input-lg form-control"  ="login">
-                    </div>
-                    <?php echo form_close() ?>  
-                </form>
-
-                      
-              </div>
-              
-            </div>
-          </div>
-        </div><!-- #register modal -->
   
   
   <main id="main">
@@ -301,8 +235,8 @@
               </div>
             </div>
           </div>
-      
-      <div class="col-lg-3 col-md-6">
+			
+			<div class="col-lg-3 col-md-6">
             <div class="member">
               <div class="pic"><img src="<?php echo base_url('assets/Home/img/j.jpg'); ?>" alt=""></div>
               <h4>Janine Sabado</h4>
@@ -315,8 +249,8 @@
               </div>
             </div>
           </div>
-      
-      <div class="col-lg-3 col-md-6">
+		  
+		  <div class="col-lg-3 col-md-6">
             <div class="member">
               <div class="pic"><img src="<?php echo base_url('assets/Home/img/m.jpg'); ?>" alt=""></div>
               <h4>Michael Lawrence Cruz</h4>
@@ -329,8 +263,8 @@
               </div>
             </div>
           </div>
-      
-      <div class="col-lg-3 col-md-6">
+		  
+		  <div class="col-lg-3 col-md-6">
             <div class="member">
               <div class="pic"><img src="<?php echo base_url('assets/Home/img/e.jpg'); ?>" alt=""></div>
               <h4>Elijah Estrella</h4>
@@ -343,8 +277,8 @@
               </div>
             </div>
           </div>
-      
-      </div>
+		  
+		  </div>
 
       </div>
     </section><!-- #team -->
@@ -352,4 +286,4 @@
     
   </main>
 
-                                         
+	                                        
