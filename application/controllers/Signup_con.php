@@ -38,7 +38,7 @@ class Signup_con extends CI_Controller {
 			$exec = $this->customer_model->insert_customer($fname,$lname,$email,$num,$addr,$username,$password,$date_created);
 			if ($exec) {
 				$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Account Created Successfully</div>');
-				redirect(base_url('pos'));
+				redirect(base_url('Pages/home'));
 			}else {
 				$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps... Something Went Wrong Please Try Again.</div>' );
 			}
