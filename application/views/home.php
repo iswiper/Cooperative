@@ -1,6 +1,8 @@
 <?php echo form_open('login_con/login_validation') ?>
+
 <?php echo form_open('adminlogin_con/login_validation') ?>
 <?php echo form_open('Signup_con/register_customer') ?>
+
 
  <!--==========================
   Header
@@ -48,6 +50,7 @@
   login modal Section
   ============================-->
   <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+
           <div class="modal-dialog">
             <div class="modal-content">
               
@@ -79,6 +82,38 @@
               
             </div>
           </div>
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        				
+        			</div>
+        			
+        			<div class="modal-body">
+        				
+	                    <form role="form" action="" method="post" class="login-form">
+	                    	<div class="input-group form-group">
+								<span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
+								<input id="username" type="text" class="form-control input-lg" name="username" placeholder="Username">
+							</div>
+	                        <div class="input-group form-group">
+								<span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
+								<input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
+							</div>
+	                        <div class="form-group">
+								<input type="submit" name="login" class="btn btn-primary input-lg form-control">
+							</div>
+							<?php echo form_close() ?>	
+	                    </form>
+	                    
+        			</div>
+        			
+        		</div>
+        	</div>
+
         </div><!-- #login modal -->
   
   <!--==========================

@@ -175,7 +175,12 @@
 </ul>
 <div class="clear"></div>
 	<div class="w3ls-btn">
+
 		<input type="submit" value="Submit Application">
+
+		<input type="submit" name="submit_account" value="Submit Application">
+	
+
 	</div>
 </form>
 </div>
