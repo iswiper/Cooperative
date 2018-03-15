@@ -15,6 +15,8 @@ class Signup_con extends CI_Controller {
 		$this->form_validation->set_rules('First_Name', 'First_Name', 'required|min_length[5]');
 		$this->form_validation->set_rules('Last_Name', 'Last_Name', 'required|min_length[5]');
 		$this->form_validation->set_rules('Email', 'Email', 'required|min_length[5]');
+		$this->form_validation->set_rules('Phone', 'Phone', 'required|min_length[11]');
+		$this->form_validation->set_rules('Address', 'Address', 'required|min_length[10]');
 		$this->form_validation->set_rules('Username', 'Username', 'required|min_length[5]');
 		$this->form_validation->set_rules('Password', 'Password', 'required|min_length[8]');
 		$this->form_validation->set_rules('repeat_password', 'Repeat Password', 'required|matches[Password]');
@@ -29,12 +31,14 @@ class Signup_con extends CI_Controller {
 			$fname = $this->input->post('First_Name');
 			$lname = $this->input->post('Last_Name');
 			$email = $this->input->post('Email');
+			$num = $this->input->post('Phone');
+			$addr = $this->input->post('Address');
 			$username = $this->input->post('Username');
 			$password = $this->input->post('Password');
-			$exec = $this->customer_model->insert_customer($fname,$lname,$email,$username,$password,$date_created);
+			$exec = $this->customer_model->insert_customer($fname,$lname,$email,$num,$addr,$username,$password,$date_created);
 			if ($exec) {
 				$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Account Created Successfully</div>');
-				redirect(base_url('pos'));
+				redirect(base_url('login_con/login'));
 			}else {
 				$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps... Something Went Wrong Please Try Again.</div>' );
 			}
