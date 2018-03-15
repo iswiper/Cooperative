@@ -25,6 +25,12 @@ class customer_model extends CI_Model {
 		$sql = $this->db->get('customer');
 		return $sql->result();
 	}
+	public function getPdetails() {
+		$this->load->database();
+		//$this->db->order_by('id','DESC');
+		$sql = $this->db->get('customer');
+		return $sql->result();
+	}
 
 	public function delete_account($id) {
 		$this->load->database();

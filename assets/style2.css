@@ -159,6 +159,7 @@ label.w3ls-opt1 {
 input[type="text"] {
     font-size: 15px;
     font-weight: 500;
+
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 10px;
@@ -175,6 +176,7 @@ input[type="email"] {
     font-size: 15px;
     font-weight: 500;
     text-transform: capitalize;
+
 	letter-spacing: 1px;
     width: 100%;
     padding: 10px;
@@ -189,7 +191,9 @@ input[type="email"] {
 input[type="password"] {
     font-size: 15px;
     font-weight: 500;
+
     text-transform: capitalize;
+
 	letter-spacing: 1px;
     width: 100%;
     padding: 10px;
@@ -216,6 +220,7 @@ input[type="password"] {
 span.w3ls-input textarea {
     font-size: 15px;
     font-weight: 500;
+
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 10px;
@@ -289,6 +294,7 @@ input[type="submit"] {
 span.w3ls-text.w3ls-name select {
     font-size: 15px;
     font-weight: 500;
+
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 10px;
@@ -307,7 +313,9 @@ span.w3ls-text.w3ls-name select option {
 select.day,select.month {
     font-size: 15px;
     font-weight: 500;
+
     text-transform: capitalize;
+
     letter-spacing: 1px;
     padding: 10px;
     margin: 10px 0;
