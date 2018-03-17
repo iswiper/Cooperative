@@ -30,6 +30,7 @@
   <!-- Main Stylesheet File -->
   <link href="<?php echo base_url();?>assets/Home/css/style.css" rel="stylesheet">
   
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/login/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/login/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?php echo base_url();?>assets/login/css/form-elements.css" rel="stylesheet">

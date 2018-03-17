@@ -16,7 +16,7 @@
 	
 </head>
 <body>
-<header style="height: 60px; background: #343a40; color: white;" class="">
+<header style="height: 60px; background: #2d2626; color: white;" class="">
 	<?php
 		$cur_date = date('l, F Y');
 		if ($this->session->userdata('log_in')) {
