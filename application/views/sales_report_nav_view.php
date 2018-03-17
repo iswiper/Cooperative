@@ -33,7 +33,7 @@
 	<?php foreach ($reports as $report) :?>
 		<tr>
 			<td><?php echo $report->date_time ?></td>
-			<td><?php echo $report->item_name ?></td>
+			<td><?php echo $report->item_names ?></td>
 			<td><?php echo $report->item_price ?></td>
 			<td><?php echo $report->quantity ?></td>
 			<td><?php echo $report->sub_total ?></td>

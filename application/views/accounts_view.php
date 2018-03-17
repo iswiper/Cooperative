@@ -3,7 +3,7 @@
 <?php echo $this->session->flashdata('errorMessage');?>
 <?php echo $this->session->flashdata('successMessage');?>
 <?php echo form_open('accounts_con/register_account'); ?>
-<?php echo form_fieldset('<h1 class="text-danger">Register Account</h1>'); ?>
+<?php echo form_fieldset('<h1 class="text-danger">Admin Registration</h1>'); ?>
 <div class="form-group">
 	<label for='Username'>Username</label>
 	<input type="text" name="Username" class="form-control">
@@ -16,10 +16,7 @@
 	<label for='repeat_password'>Repeat Password</label>
 	<input type="password" name="repeat_password" class="form-control">
 </div>
-<div class="form-group">
-	<label for='account_type'>Account Type: Admin</label>
-	
-</div>
+
 <div class="form-group">
 	<input type="submit" name="submit_account" class="btn btn-success" value="Register">
 </div>
@@ -32,7 +29,6 @@
 		<tr>
 			<th>ID</th>
 			<th>Username</th>
-			<th>Account Type</th>
 			<th>Date/Time Created</th>
 			<th>Action</th>
 		</tr>
