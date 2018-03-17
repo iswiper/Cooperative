@@ -5932,8 +5932,8 @@ button.close {
   opacity: .5;
 }
 .modal-header {
-  padding: 10px;
-  border-bottom: 1px solid pink;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
 }
 .modal-header .close {
   margin-top: -2px;
