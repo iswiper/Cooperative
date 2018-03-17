@@ -27,7 +27,7 @@
 	?>
 	
 	<div style="padding-left: 20px; padding-top: 1px;">
-		<h2><a style="color: white; font-size: 35px; text-decoration: none;"href="<?php echo base_url(); ?>pages/home">Cooperative</a></h2>
+		<h2><a style="color: white; font-size: 35px; text-decoration: none;"href="<?php echo base_url(); ?>home_con/home">Cooperative</a></h2>
 	</div>
 </header>
 <div class="row" style="margin-bottom: -10px;">

@@ -33,14 +33,18 @@
 <body>
 
 <section id="hero">
+ 
+    
+
     <div class="hero-container">
 
     		<div class="col-sm-10" id="main" style="padding-top: 20px;">
 					<div class="col-sm-4">
-					<?php echo $this->session->flashdata('errorMessage');?>
-					<?php echo $this->session->flashdata('successMessage');?>
-					<?php echo form_open('Signup_con/register_customer'); ?>	
-<p style=" color: white; font-size: 30px;font-weight: 500;">Register</p>
+						<?php echo form_open('Signup_con/register_customer'); ?>	
+
+					
+<br>										
+<p style=" color: white; font-size: 30px;font-weight: 500; padding-left:11em">Registration</p>
 <div class="w3ls-main">
 <div class="w3ls-form">
 <form action="#" method="post">
@@ -73,18 +77,7 @@
 			</span>
 		
 	</li>
-	<li>
-		<label class="w3ls-opt">phone number :<span class=""> * </span></label>	
-			<span class="w3ls-text w3ls-name">
-						<input id="Phone" maxlength="11" type="text" name="Phone" placeholder="Phone Number" required=""/>
-			</span>
-	</li>
-	<li>
-		<label class="w3ls-opt">Address :<span class=""> * </span></label>	
-			<span class="w3ls-text w3ls-name">
-						<input id="Address" type="text" name="Address" placeholder="Address" required=""/>
-			</span>
-	</li>
+	
 	<li>
 		<label class="w3ls-opt">Userame :<span class=""> * </span></label>	
 			<span class="w3ls-text w3ls-name">
@@ -103,71 +96,6 @@
 			<input  id="Password" type="Password" name="repeat_password" placeholder="Password" required=""/>
 			</span>
 	</li>
-	<li>
-							<label class="w3ls-opt">Birth Date :<span class=""> * </span></label>	
-							<div class="w3ls-text w3ls-name">
-								<span class="agile_sub-label">
-									<select name="day" class="day">
-										<option>Day</option>
-										<option name="day" value="1"> 1 </option>
-										<option name="day" value="2"> 2 </option>
-										<option name="day" value="3"> 3 </option>
-										<option name="day" value="4"> 4 </option>
-										<option name="day" value="5"> 5 </option>
-										<option name="day" value="6"> 6 </option>
-										<option name="day" value="7"> 7 </option>
-										<option name="day" value="8"> 8 </option>
-										<option name="day" value="9"> 9 </option>
-										<option name="day" value="10"> 10 </option>
-										<option name="day" value="11"> 11 </option>
-										<option name="day" value="12"> 12 </option>
-										<option name="day" value="13"> 13 </option>
-										<option name="day" value="14"> 14 </option>
-										<option name="day" value="15"> 15 </option>
-										<option name="day" value="16"> 16 </option>
-										<option name="day" value="17"> 17 </option>
-										<option name="day" value="18"> 18 </option>
-										<option name="day" value="19"> 19 </option>
-										<option name="day" value="20"> 20 </option>
-										<option name="day" value="21"> 21 </option>
-										<option name="day" value="22"> 22 </option>
-										<option name="day" value="23"> 23 </option>
-										<option name="day" value="24"> 24 </option>
-										<option name="day" value="25"> 25 </option>
-										<option name="day" value="26"> 26 </option>
-										<option name="day" value="27"> 27 </option>
-										<option name="day" value="28"> 28 </option>
-										<option name="day" value="29"> 29 </option>
-										<option name="day" value="30"> 30 </option>
-										<option name="day" value="31"> 31 </option>
-									</select>
-									
-								</span>
-								<span class="agile_sub-label xxx">
-									<select name="month" class="month">
-										<option>Month</option>
-										<option name="month" value="January"> January </option>
-										<option name="month" value="February"> February </option>
-										<option name="month" value="March"> March </option>
-										<option name="month" value="April"> April </option>
-										<option name="month" value="May"> May </option>
-										<option name="month" value="June"> June </option>
-										<option name="month" value="July"> July </option>
-										<option name="month" value="August"> August </option>
-										<option name="month" value="September"> September </option>
-										<option name="month" value="October"> October </option>
-										<option name="month" value="November"> November </option>
-										<option name="month" value="December"> December </option>
-									 </select>
-									
-								</span>
-								<span class="agile_sub-label">
-									<input type="text" class="year" name="year" placeholder=" Enter Year" required="">
-									
-								</span>
-								<div class="clear"></div>
-							</div>
-						</li>
 						<div class="wthree-text">
 						
 					</div>

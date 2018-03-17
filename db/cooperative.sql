@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2018 at 08:11 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Generation Time: Mar 17, 2018 at 05:24 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,7 +32,6 @@ CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(300) NOT NULL,
-  `account_type` varchar(50) NOT NULL,
   `date_created` varchar(100) NOT NULL,
   `created_by` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -41,8 +40,9 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `account_type`, `date_created`, `created_by`) VALUES
-(12, 'Cooperative', '$2y$10$z6FEETw1gx0AVj.4kJOWXeDQs/RRDJf1pWEFJr3C9UUeAXek7mlIm', 'Admin', '2018-03-09 08:39:37 am', 'Cooperative Company');
+INSERT INTO `accounts` (`id`, `username`, `password`, `date_created`, `created_by`) VALUES
+(12, 'Cooperative', '$2y$10$z6FEETw1gx0AVj.4kJOWXeDQs/RRDJf1pWEFJr3C9UUeAXek7mlIm', '2018-03-09 08:39:37 am', 'Cooperative Company'),
+(13, 'Cooperative2', '$2y$10$bR.DHdHSKpm8V7neKNtKqOw38oi2L91vbnT5rQKzD02DUMwciC.Nm', '2018-03-17 11:39:41 am', 'Cooperative Company');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `date_time`, `category`, `creator`) VALUES
-(2, '2018-03-09 10:21:12 am', 'Gel', 'Cooperative Company');
+(2, '2018-03-09 10:21:12 am', 'Gel', 'Cooperative Company'),
+(3, '2018-03-17 11:40:15 am', 'toothpaste', 'Cooperative Company');
 
 -- --------------------------------------------------------
 
@@ -75,24 +76,10 @@ CREATE TABLE `customer` (
   `first_name` varchar(25) NOT NULL,
   `last_name` varchar(25) NOT NULL,
   `email` varchar(25) NOT NULL,
-  `phone` int(11) NOT NULL,
-  `address` varchar(100) NOT NULL,
-  `birth` varchar(10) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(300) NOT NULL,
   `date_created` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `customer`
---
-
-INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `phone`, `address`, `birth`, `username`, `password`, `date_created`) VALUES
-(16, '', '', '', 0, '', '', 'pedro', '$2y$10$r03imqpNSCXfVhnnpqoutu0HiB/EYr8mkJ.HO9jGfmeae/LIwBtt.', '2018-03-09 05:22:45 pm'),
-(17, '', '', '', 0, '', '', 'pablo ', '$2y$10$Ma8zE05Yl6EdsU9iOpYYgOFPMZkYRK0ObrEEnq/5bFTVhpZQHMxoy', '2018-03-09 05:53:25 pm'),
-(18, '', '', '', 0, '', '', 'hello', '$2y$10$Di7txGJdXh7R31XXsC/NpupmpAQTll12hG7fpExP7ebyQVzgZkM2y', '2018-03-10 03:53:37 am'),
-(23, 'qwertyuiop', 'qwertyuiop', 'q@gmail.com', 2147483647, 'qwertyuiop', '', 'qwertyuiop', '$2y$10$FqVO087SI8425aTZ88Ftxew.ekkWp1ggi/syuETYF25gPf2MUjCNW', '2018-03-11 02:30:37 pm'),
-(24, 'qqqqqqqqqqqq', 'qqqqqqqqqqq', 'q@gmail.com', 2147483647, '11111111111111111111111111', 'Day', 'lkjhgfdsa', '$2y$10$4GWLTosFPKMDVZ9/CgUWZebUErVi1xMy4ab7mbe1Gv9WSqeeSzbSW', '2018-03-11 02:43:08 pm');
 
 -- --------------------------------------------------------
 
@@ -116,7 +103,8 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `category`, `description`, `date_time`, `creator`, `quantities`, `price`) VALUES
-(2, 'Titanic Gel', 'Gel', '9g Hardens your Hair', '2018-03-09 10:21:46 am', 'Cooperative Company', 810, 80);
+(2, 'Titanic Gel', 'Gel', '9g Hardens your Hair', '2018-03-09 10:21:46 am', 'Cooperative Company', 801, 80),
+(3, 'tidehunter', 'toothpaste', '9g hardens your teeth', '2018-03-17 11:41:00 am', 'Cooperative Company', 90, 90);
 
 -- --------------------------------------------------------
 
@@ -144,7 +132,8 @@ CREATE TABLE `sales` (
 --
 
 INSERT INTO `sales` (`id`, `sale_id`, `date_time`, `item_id`, `item_name`, `item_price`, `quantity`, `sub_total`, `date`, `month`, `year`, `week`) VALUES
-(2, 393411928, '2018-03-09 10:23:51', '2', 'Titanic Gel', 80, 90, 7200, '2018-03-09', '03', '2018', '10');
+(2, 393411928, '2018-03-09 10:23:51', '2', 'Titanic Gel', 80, 90, 7200, '2018-03-09', '03', '2018', '10'),
+(3, 68622178, '2018-03-17 11:48:57', '2', 'Titanic Gel', 80, 9, 720, '2018-03-17', '03', '2018', '11');
 
 --
 -- Indexes for dumped tables
@@ -188,31 +177,31 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,6 +1,5 @@
 <?php echo form_open('login_con/login_validation') ?>
 
-<?php echo form_open('adminlogin_con/login_validation') ?>
 <?php echo form_open('Signup_con/register_customer') ?>
 
 
@@ -40,7 +39,7 @@
     <div class="hero-container">
       <h1>Welcome to Cooperative</h1>
       <h2>A website to purchase goods in afforadable price.</h2>
-      <a class="btn-get-started launch-modal" data-modal-id="modal-login">Get Started</a>
+      
 	  
     </div>
   </section><!-- #hero -->
@@ -66,11 +65,11 @@
                       <form role="form" action="" method="post" class="login-form">
                         <div class="input-group form-group">
                 <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                <input id="username" type="text" class="form-control input-lg" name="username" placeholder="Username">
+                <input id="username" type="text" Required="" class="form-control input-lg" name="username" placeholder="Username">
               </div>
                           <div class="input-group form-group">
                 <span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
-                <input id="password" type="password" class="form-control input-lg" name="password" placeholder="Password">
+                <input id="password" type="password" Required="" class="form-control input-lg" name="password" placeholder="Password">
               </div>
                           <div class="form-group">
                 <input type="submit" name="login" class="btn btn-primary input-lg form-control"  ="Login">
@@ -83,74 +82,8 @@
             </div>
           </div>
         	
-
         </div><!-- #login modal -->
   
-  <!--==========================
-  Register modal Section
-  ============================-->
-  <div class="modal fade" id="modal-reg" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
-                
-              </div>
-              
-              <div class="modal-body">
-                <?php echo $this->session->flashdata('errorMessage');?>
-                 <?php echo $this->session->flashdata('successMessage');?>
-                <form role="form" action="" method="post" class="login-form">
-
-                    <div class="input-group form-group ">
-                        <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                        <input id="First_Name" type="text" class="form-control input-lg" name="First_Name" placeholder="First Name">
-                        <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                        <input id="Last_Name" required="" type="text" class="form-control input-lg" name="Last_Name" placeholder="Last Name">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-phone " aria-hidden="true"></i></span>
-                        <input id="Phone" type="text" maxlength="11" class="form-control input-lg" name="Phone" placeholder="Phone">
-                    </div>
-                   
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="  fa fa-address-book " aria-hidden="true"></i></span>
-                        <input id="Address" type="text" class="form-control input-lg" name="Address" placeholder="Address">
-                    </div>
-                     <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-at " aria-hidden="true"></i></span>
-                        <input id="Email" type="email" class="form-control input-lg" name="Email" placeholder="Email Address">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-user " aria-hidden="true"></i></span>
-                        <input id="Username" type="text" class="form-control input-lg" name="Username" placeholder="Username">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
-                        <input id="Password" type="password" class="form-control input-lg" name="Password" placeholder="Password">
-                    </div>
-                    <div class="input-group form-group">
-                        <span class="input-group-addon"><i class="fa fa-key " aria-hidden="true"></i></span>
-                        <input id="repeat_password" type="password" class="form-control input-lg" name="repeat_password" placeholder="Confirm Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="signup" class="btn btn-primary input-lg form-control"  ="login">
-                    </div>
-                    <?php echo form_close() ?>  
-                </form>
-
-                      
-              </div>
-              
-            </div>
-          </div>
-        </div><!-- #register modal -->
-  
-  
-  <main id="main">
 
       <!--==========================
       About Us Section
@@ -167,19 +100,19 @@
 
             <div class="icon-box wow fadeInUp">
               <div class="icon"><i class="fa fa-handshake-o"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Every member doing their bit, making our cooperative a success by supporting its activities and using its products and services.</p>
+                            <b>Cooperate with one another</b>
+                            <p class="description">Every member doing their bit, making our cooperative a success by supporting its activities and using its products and services.</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-globe"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Our co-op gives all members an opportunity to get involved, like campaigning for fair trade.</p>
+                            <b>Seize the oppurtunity</b>
+                            <p class="description">Our co-op gives all members an opportunity to get involved, like campaigning for fair trade.</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
               <div class="icon"><i class="fa fa-group"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <b>Togetherness</b>            
               <p class="description">Together we’re stronger, so members join together to help our co-op achieve even more.</p>
             </div>
 
@@ -252,7 +185,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="<?php echo base_url('assets/Home/img/v.jpg'); ?>" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('assets/Home/img/venjie.jpg'); ?>" alt=""></div>
               <h4>Venjie Mendez</h4>
               <span>Back-end Developer</span>
               <div class="social">
@@ -266,7 +199,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="<?php echo base_url('assets/Home/img/l.jpg'); ?>" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('assets/Home/img/neng.jpg'); ?>" alt=""></div>
               <h4>Lyle Angeline Paulo</h4>
               <span>Back-end Developer</span>
               <div class="social">
@@ -280,7 +213,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="<?php echo base_url('assets/Home/img/r.jpg'); ?>" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('assets/Home/img/maru.jpg'); ?>" alt=""></div>
               <h4>Mary Rose Apoyon</h4>
               <span>Front-end Developer</span>
               <div class="social">
@@ -294,9 +227,10 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="<?php echo base_url('assets/Home/img/ed.jpg'); ?>" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('assets/Home/img/edward.jpg'); ?>" alt=""></div>
               <h4>Edward Vincent Anabo</h4>
               <span>Back-end Developer</span>
+              <span>Quality Assurance</span>
               <div class="social">
                 <a href=""><i class="fa fa-twitter"></i></a>
                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -308,7 +242,7 @@
 			
 			<div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="<?php echo base_url('assets/Home/img/j.jpg'); ?>" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('assets/Home/img/ja.jpg'); ?>" alt=""></div>
               <h4>Janine Sabado</h4>
               <span>Front-end Developer</span>
               <div class="social">
@@ -322,7 +256,7 @@
 		  
 		  <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="<?php echo base_url('assets/Home/img/m.jpg'); ?>" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('assets/Home/img/law.jpg'); ?>" alt=""></div>
               <h4>Michael Lawrence Cruz</h4>
               <span>Front-end Developer</span>
               <div class="social">
@@ -334,19 +268,7 @@
             </div>
           </div>
 		  
-		  <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="<?php echo base_url('assets/Home/img/e.jpg'); ?>" alt=""></div>
-              <h4>Elijah Estrella</h4>
-              <span>Quality Assurance Tester</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
+		  
 		  
 		  </div>
 

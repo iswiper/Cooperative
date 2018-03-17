@@ -1,6 +1,12 @@
 <?php 
 class Login_con extends CI_Controller {
 
+	public function login(){
+				$this->load->view('header');
+				$this->load->view('login');
+				$this->load->view('footer');
+			
+	}
 	
 	
 	public function login(){
