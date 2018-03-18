@@ -37,7 +37,7 @@ class Signup_con extends CI_Controller {
 
 				redirect(base_url('login_con/login'));
 
-				redirect(base_url('home_con/home'));
+				redirect(base_url('Pages/home'));
 
 			}else {
 				$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps... Something Went Wrong Please Try Again.</div>' );
