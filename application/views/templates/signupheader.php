@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   
-  <title>SB Admin - Start Bootstrap Template</title>
+  <title>Cooperative</title>
   <!-- Bootstrap core CSS-->
   	
   <link href="<?php echo base_url('assets/Admin/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
