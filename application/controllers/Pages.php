@@ -17,6 +17,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');
 		$this->load->view('main',$data);
+		$this->load->view('templates/footeradmin');
 		
 	}
 
@@ -25,7 +26,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');
 		$this->load->view('sales_report_nav_view');
-		
+		$this->load->view('templates/footeradmin');
 	}
 
 	public function new_item() {
@@ -35,6 +36,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');
 		$this->load->view('main',$data);
+		$this->load->view('templates/footeradmin');
 	
 	}
 
@@ -45,7 +47,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');
 		$this->load->view('main',$data);
-		
+		$this->load->view('templates/footeradmin');
 	}
 
 	public function accounts () {
@@ -55,7 +57,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');
 		$this->load->view('accounts_view',$data);
-		
+		$this->load->view('templates/footeradmin');
 	}
 
 	public function logout () {

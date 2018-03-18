@@ -54,11 +54,10 @@ class Item extends CI_Controller {
 		$data['item_name'] = $item_name;
 		$this->load->model('item_model');
 		$data['item_info'] = $this->item_model->item_info(urldecode($item_name));
-		$this->load->view('header');
+		$this->load->view('templates/headeradmin');
 		$this->load->view('side_menu');
 		$this->load->view('stock_in_view',$data);
-		$this->load->view('item_info',$data);
-		$this->load->view('footer');
+		$this->load->view('templates/footeradmin');
 	}
 
 	public function add_stocks() {
@@ -94,10 +93,10 @@ class Item extends CI_Controller {
 		$data['category'] = $this->categories_model->getCategoriesName();
 		$this->load->model('item_model');
 		$data['item'] = $this->item_model->item_info($name);
-		$this->load->view('header');
+		$this->load->view('templates/headeradmin');
 		$this->load->view('side_menu');
 		$this->load->view('item_update_view.php',$data);
-		$this->load->view('footer');
+		$this->load->view('templates/footeradmin');
 	}
 
 	public function item_update($id) {

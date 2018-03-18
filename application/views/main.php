@@ -1,19 +1,19 @@
-<div class="col-sm-10" id="main">
+<div class="fixed-nav sticky-footer bg-dark" id="page-top">
 		<?php
-		echo '<div class="table-wrapper">';
+		echo '<div class="content-wrapper">';
 		if ($page === 'inventory') {
 			if (empty($items) ) {
-				echo '<div style="padding:20px;">';
-				echo '<legend class="text-primary"><h3>Currently 0 Item In The Inventory</h3></legend> <br>' ;
+				echo '<div class="card mb-3">';
+				echo '<div class="card-header"><h3>Currently 0 Item In The Inventory</h3></div> <br>' ;
 				echo '<a href='. base_url('new_item') .' class="btn btn-warning">Register Item Now.</a>';
 				echo '</div>';
 			}else {
-				echo '<div id="content">';
+				echo '<div class="card mb-3">';
 				echo $this->session->flashdata('successMessage');
 				echo $this->session->flashdata('errorMessage');
-				echo '<legend class="text-danger"><h1>Item List</h1></legend>';
+				echo '<div class="card-header"><h1>Item List</h1></div>';
 				$tableAttr = array(
-					'table_open' => '<table class="table table-responsive table-striped table-hover" id="item_tbl">',
+					'table_open' => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">',
 					);
 				$item_table = $this->table->set_heading('No.','Name','Category','Description', 'Quantity', 'Price','Action');
 				$item_table = $this->table->set_template($tableAttr);
@@ -32,7 +32,7 @@
 			}
 	
 		}else if ($page === 'categories') {
-			echo '<div id="content_category">';
+			echo '<div class="card mb-3">';
 			echo '<div class="col-sm-12" >';
 			echo $this->session->flashdata('errorMessage');
 			echo $this->session->flashdata('successMessage');
@@ -41,7 +41,7 @@
 				);
 			echo '<div id="new_category">';
 			echo form_open('category',$formAttr);
-			echo form_fieldset('<h1  class="text-danger">New Category</h1>');
+			echo form_fieldset('<div class="card-header"><h1>New Category</h1></div>');
 			echo '<div class="form-group">';
 			echo form_label('Category Name');
 			echo form_input(array('class' => 'form-control','name' => 'category','placeholder' => 'Enter Category Name Here'));
@@ -55,10 +55,10 @@
 			echo '</div>';
 			echo '<div class="col-sm-12">';
 			if (empty($categoryList)) {
-				echo '<div class="page-header"><h3 class="text-info">Category Is Empty</h3></div>';
+				echo '<div class="card-header"><h1>Category is Empty</h1></div>';
 			}else {
 				echo '<div>';
-				echo '<legend><h1 class="text-danger">Category List</h1></legend>';
+				echo '<div class="card-header"><h1>Category List</h1></div>';
 				$template = array(
 					'table_open' => '<table class="table table-responsive table-striped table-hover">',
 
@@ -78,7 +78,7 @@
 			echo '</div>';
 			echo '</div>';
 		}else if ($page === 'new_item') {
-			echo '<div id="content-new-item">';
+			echo '<div class="card mb-3">';
 			$nameAttr = array(
 				'class' => 'form-control',
 				'type' => 'text',
@@ -104,14 +104,14 @@
 			echo $this->session->flashdata('errorMessage');
 			echo $this->session->flashdata('successMessage');
 			echo form_open('item/item_con');
-			echo form_fieldset('<h1 class="text-danger">New Item </h1>');
+			echo form_fieldset('<div class="card-header"><h1>New Item</h1></div>');
 			
 			echo '<div class="form-group">';
-			echo form_label('Item Name');
+			echo form_label('&emsp;Item Name:');
 			echo form_input($nameAttr);
 			echo '</div>';
 			echo '<div class="form-group">';
-			echo form_label('Category');
+			echo form_label('&emsp;Category:');
 			echo "<select class='form-control' name='category'>";
 			echo '<option value="Select Any" selected="selected">Select Any</option>';
 			foreach ($category as $cat) {
@@ -122,12 +122,12 @@
 			echo "</select>";
 			echo '</div>';
 			echo '<div class="form-group">';
-			echo form_label('Price');
+			echo form_label('&emsp;Price:');
 			echo form_input($priceAttr);
 			echo '</div>';
 		
 			echo '<div class="form-group">';
-			echo form_label('Description');
+			echo form_label('&emsp;Description:');
 			echo '<textarea name="description" class="form-control" rows="5" placeholder="Item Description"></textarea>';
 			echo '</div>';
 			echo '<div class="form-group">';

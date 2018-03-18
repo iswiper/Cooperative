@@ -1,19 +1,9 @@
- <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Cooperative</strong>. All Rights Reserved
-      </div>
-      
-  </footer><!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
+ <!-- Bootstrap core JavaScript-->
+  <script src="<?php echo base_url();?>assets/Admin/vendor/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>assets/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="<?php echo base_url();?>assets/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+  
   <!-- JavaScript Libraries -->
   <script src="<?php echo base_url();?>assets/Home/lib/jquery/jquery.min.js"></script>
   <script src="<?php echo base_url();?>assets/Home/lib/jquery/jquery-migrate.min.js"></script>
@@ -34,4 +24,5 @@
   <script src="<?php echo base_url();?>assets/Home/js/main.js"></script>
 
 </body>
+
 </html>

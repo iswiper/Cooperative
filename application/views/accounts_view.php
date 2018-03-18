@@ -1,30 +1,31 @@
-<div class="col-sm-10" id="main" style="padding-top: 20px;">
-<div class="col-sm-4">
+<div class="fixed-nav sticky-footer bg-dark" id="page-top">
+<div class="content-wrapper">
+<div class="card mb-3">
 <?php echo $this->session->flashdata('errorMessage');?>
 <?php echo $this->session->flashdata('successMessage');?>
 <?php echo form_open('accounts_con/register_account'); ?>
-<?php echo form_fieldset('<h1 class="text-danger">Admin Registration</h1>'); ?>
+<?php echo form_fieldset('<div class="card-header"><h1>Admin Registration</h1></div>'); ?>
 <div class="form-group">
-	<label for='Username'>Username</label>
+	<label for='Username'>&emsp;Username:</label>
 	<input type="text" name="Username" class="form-control">
 </div>
 <div class="form-group">
-	<label for='Password'>Password</label>
+	<label for='Password'>&emsp;Password</label>
 	<input type="password" name="Password" class="form-control">
 </div>
 <div class="form-group">
-	<label for='repeat_password'>Repeat Password</label>
+	<label for='repeat_password'>&emsp;Repeat Password</label>
 	<input type="password" name="repeat_password" class="form-control">
 </div>
 
 <div class="form-group">
-	<input type="submit" name="submit_account" class="btn btn-success" value="Register">
+	<input type="submit" name="submit_account" class="btn btn-primary" value="Register">
 </div>
 <?php echo form_close(); ?>
 </div>
 <div class="col-sm-8">
 
-	<?php echo form_fieldset('<h1 class="text-danger">Registed Accounts</h1>'); ?>
+	<?php echo form_fieldset('<div class="card-header"><h1>Registered Accounts</h1></div>'); ?>
 	<table class="table table-striped table-hover table-responsive">
 		<tr>
 			<th>ID</th>

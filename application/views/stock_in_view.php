@@ -1,4 +1,4 @@
-<div class="col-sm-10" id="main" style="padding-top: 20px;">
+<div class="content-wrapper" id="main" style="padding-top: 20px;">
 <div class='col-sm-6'>
 <?php 
 $attribute = array(
