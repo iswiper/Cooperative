@@ -35,9 +35,7 @@ class Signup_con extends CI_Controller {
 			if ($exec) {
 				$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Account Created Successfully</div>');
 
-				redirect(base_url('login_con/login'));
-
-				redirect(base_url('Pages/home'));
+				redirect(base_url('login_con/login'));	
 
 			}else {
 				$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps... Something Went Wrong Please Try Again.</div>' );

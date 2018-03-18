@@ -1,29 +1,73 @@
-<div class="col-sm-2" id="side-menu">
-	<div>
-		<ul class="list-side-menu">
-			<?php
+<div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+		<?php
 				$location = $this->uri->segment(1); 
 			?>
-			<li class="list-side-group-item <?php if ($location === 'inventory' || $location === 'item') {echo 'active-link';}?> ">
-
-				<a class="<?php if ($location === 'inventory') {echo 'active-text';}?>" href="<?php echo base_url("inventory") ?>">
-				<span class="glyphicon glyphicon-folder-close"></span><br>Inventory</a>
-			</li>
-			<li class="list-side-group-item <?php if ($location === 'new_item') {echo 'active-link';}?> ">
-				<a class="<?php if ($location === 'new_item') {echo 'active-link';}?>" href="<?php echo base_url("new_item") ?>"><i class="fa fa-plus fa-big" aria-hidden="true"></i><br>New Item</a>
-			</li>
-			<li class="list-side-group-item <?php if ($location === 'sales') {echo 'active-link';}?>">
-				<a class="<?php if ($location === 'sales') {echo 'active-link';}?>" href="<?php echo base_url("daily_sales_report") ?>"><span class="glyphicon 	glyphicon glyphicon-list-alt"></span><br>Sales</a>
-			</li>
-			<li class="list-side-group-item <?php if ($location === 'categories') {echo 'active-link';}?> "><a class="<?php if ($location === 'categories') {echo 'active-link';}?>" href="<?php echo base_url("categories") ?>"><span class="glyphicon glyphicon glyphicon-tags"></span><br>Categories</a></li>
-			
-			
-			<li class="list-side-group-item <?php if ($location === 'accounts') {echo 'active-link';}?> ">
-				<a class="<?php if ($location === 'accounts') {echo 'active-link';}?>" href="<?php echo base_url("accounts") ?>"><span class="glyphicon glyphicon glyphicon-user"></span><br>Accounts</a>
-			</li>
+	 <!--#############################################HOME################################################################################################-->
+        <li class="nav-item <?php if ($location === 'inventory' || $location === 'item') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Inventory" >
+          <a class="nav-link <?php if ($location === 'inventory') {echo 'active-text';}?>" href="<?php echo base_url("inventory") ?>">
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Inventory</span>
+          </a>
+        </li>
 		
+	<!--#############################################CATEGORY################################################################################################-->
+        <li class="nav-item <?php if ($location === 'caegories') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Category" >
+          <a class="nav-link <?php if ($location === 'categories') {echo 'active-text';}?>" href="<?php echo base_url("categories") ?>">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Category</span>
+          </a>
+        </li>
+   <!--#############################################COSTUMER################################################################################################-->
+		<li class="nav-item <?php if ($location === 'new_item') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Item" >
+          <a class="nav-link <?php if ($location === 'new_item') {echo 'active-text';}?>" href="<?php echo base_url("new_item") ?>">
+		   <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">New Item</span>
+          </a>
+        </li>
 		
-			<li id="log-out" class="list-side-group-item <?php if ($location === 'logout') {echo 'active-link';}?> "><a href="<?php echo base_url("logout/out") ?>"><span class="glyphicon glyphicon glyphicon-log-out"></span><br>Logout</a></li>
-		</ul>
-	</div>
-</div>
+	 <!--#############################################SUPPLIER################################################################################################-->	
+        <li class="nav-item <?php if ($location === 'sales') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="sales" >	
+		
+		<a class="nav-link <?php if ($location === 'sales') {echo 'active-text';}?>" href="<?php echo base_url("daily_sales_report") ?>">
+		
+		  <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Sales</span>
+          </a>
+        </li>
+		
+						
+	 <!--#############################################STOCK################################################################################################-->	
+     <li class="nav-item <?php if ($location === 'accounts') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="accounts" >
+          <a class="nav-link <?php if ($location === 'accounts') {echo 'active-text';}?>" href="<?php echo base_url("accounts") ?>">
+		   <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Accounts</span>
+          </a>
+        </li>
+		
+		 <!--#############################################SALES################################################################################################-->
+		 
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="logout">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+		
+		  
+		 
+	
+		
+		</li>
+      </ul>
+		
+	
+ 
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+         
+	    </li>
+		
+	   </ul>
+    </div>
+  </nav>
+  
+  

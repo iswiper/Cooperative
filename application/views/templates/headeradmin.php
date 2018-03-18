@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php if(isset($page_name)) {echo $page_name .' - Sales And Inventory System';} else echo "Cooperative" ?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css'); ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome-4.7.0/css/font-awesome.css'); ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/style.css')?>">
-	
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title><?php if(isset($page_name)) {echo $page_name .' - Consumer Cooperative Solution';} else echo "Cooperative" ?></title>
+	<!-- Bootstrap core CSS-->
+  <link rel="stylesheet" href="<?php echo base_url('assets/Admin/vendor/bootstrap/css/bootstrap.min.css');?>">
+  <!-- Custom fonts for this template-->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/Admin/vendor/font-awesome/css/font-awesome.min.css');?>" >
+  <!-- Page level plugin CSS-->
+  <link rel="stylesheet" href="<?php echo base_url('assets/Admin/vendor/datatables/dataTables.bootstrap4.css');?>" >
+  <!-- Custom styles for this template-->
+  <link rel="stylesheet" href="<?php echo base_url('assets/Admin/css/sb-admin.css');?>" >
 	
   <!-- Favicons -->
   
@@ -15,22 +23,10 @@
   <link href="<?php echo base_url();?>assets/Home/img/apple-touch-icon.png" rel="apple-touch-icon">
 	
 </head>
-<body>
-<header style="height: 60px; background: #2d2626; color: white;" class="">
-	<?php
-		$cur_date = date('l, F Y');
-		if ($this->session->userdata('log_in')) {
-			?>
-			<p class="lead" style="float: right; padding-right: 15px; margin-top: 11px;"><?php echo $cur_date ?> | <?php echo $this->session->userdata('username') ?></p>
-			<?php
-		}
-	?>
-	
-	<div style="padding-left: 20px; padding-top: 2px;">
-		<h2>Cooperative</h2>
-		<p style="margin: 0;"> </p>
-	</div>
-</header>
-<div class="row" style="margin-bottom: -10px;">
-<div class="container-fluid main-content" >
-
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!--############################################################################## Navigation ###############################################################################################################-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="">Cooperative Administrator</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>

@@ -1,6 +1,6 @@
-<div class="col-sm-6 ">
-	<?php echo form_fieldset('<h3 class="text-primary">Item Information </h3>');?>
-	<div id="item_info">
+<div class="content-wrapper">	
+<?php echo form_fieldset('<h3 class="text-primary">Item Information </h3>');?>
+	<div class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 		<div class="row item_info">
 			<div>
 			<div class="col-sm-4">

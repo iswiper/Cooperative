@@ -1,9 +1,11 @@
+<div class="content-wrapper">
+<div class="card mb-3">
 <div class="col-sm-10" id="main">
 	<div id="content">
 	<?php
 	$total = 0;
 	?>
-	<?php echo form_fieldset('<h1 class="text-danger">Sales Report</h1>'); ?>
+	<?php echo form_fieldset('<div class="card-header"><h1>Sales Report</h1></div>'); ?>
 		<nav>
 			<ul id="sales-nav">
 				<li>
@@ -56,4 +58,5 @@
 </p>
 	</div>
 </div>
-
+</div>
+</div>

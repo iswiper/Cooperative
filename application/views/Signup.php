@@ -1,120 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Cooperative</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+<?php echo form_open('Signup_con/register_customer'); ?>	
 
-  <!-- Favicons -->
-  
-  <link href="<?php echo base_url();?>assets/img/favicon.png" rel="icon">
-  
-  <link href="<?php echo base_url();?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-
-  <!-- Bootstrap CSS File -->
-  <link href="<?php echo base_url();?>assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="<?php echo base_url();?>assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  
-  <link href="<?php echo base_url();?>assets/lib/animate/animate.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
-  <link href="<?php echo base_url();?>assets/style2.css" rel="stylesheet">
-
-
-</head>
-
-<body>
-
-<section id="hero">
- 
-    
-
-    <div class="hero-container">
-
-    		<div class="col-sm-10" id="main" style="padding-top: 20px;">
-					<div class="col-sm-4">
-						<?php echo form_open('Signup_con/register_customer'); ?>	
-
-					
-<br>										
-<p style=" color: white; font-size: 30px;font-weight: 500; padding-left:11em">Registration</p>
-<div class="w3ls-main">
-<div class="w3ls-form">
-<form action="#" method="post">
-<ul class="fields">
-	
-<div class="top-row">
-            <div class="field-wrap">
-	<li>	
-		<label class="w3ls-opt">First Name :<span class=""> * </span></label>
+<body class="bg-dark">
+  <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Register an Account</div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputName" name="First_Name" required="">First name</label>
+                <input required="" name="First_Name" class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputLastName">Last name</label>
+                <input required="" name="Last_Name" class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
+              </div>
+            </div>
+		  </div>
+		  
+		  <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputName">Username</label>
+                <input required="" name="Username" class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter Username">
+              </div>
+            </div>
+		  </div>
 		
-			<input id="First_Name" type="text" name="First_Name" placeholder="First Name" required=" "/>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input required="" name="Email" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputPassword1">Password</label>
+                <input required="" name="Password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+              </div>
+              <div class="col-md-6">
+                <label for="exampleConfirmPassword">Confirm password</label>
+                <input required="" class="form-control" id="exampleConfirmPassword" name="repeat_password" type="password" placeholder="Confirm password">
+              </div>
+            </div>
+          </div>
+          <input class="btn btn-primary btn-block" type="submit" name="submit_account" value="Submit Application">
 		
-	</li>
-</div>
-            <div class="field-wrap">
-
-	<li>	
-		<label class="w3ls-opt">Last Name :<span class=""> * </span></label>
-		
-			<input id="Last_Name" type="text" name="Last_Name"  placeholder="Last Name" required=" "/>
-	
-	</li>
-</div></div>
-
-	<li>
-		
-			<label class="w3ls-opt">e-mail :<span class=""> * </span></label>
-			<span class="w3ls-text w3ls-name">
-				<input id="Email" type="email" name="Email"  placeholder="Email" required=""/>
-			</span>
-		
-	</li>
-	
-	<li>
-		<label class="w3ls-opt">Userame :<span class=""> * </span></label>	
-			<span class="w3ls-text w3ls-name">
-						<input id="Username" type="text" name="Username" placeholder="Username" required=""/>
-			</span>
-	</li>
-	<li>
-		<label class="w3ls-opt">Password :<span class=""> * </span></label>	
-			<span class="w3ls-password w3ls-name">
-			<input  id="Password" type="Password" name="Password" placeholder="Password" required=""/>
-			</span>
-	</li>
-	<li>
-		<label class="w3ls-opt"> Repeat Password :<span class=""> * </span></label>	
-			<span class="w3ls-password w3ls-name">
-			<input  id="Password" type="Password" name="repeat_password" placeholder="Password" required=""/>
-			</span>
-	</li>
-						<div class="wthree-text">
-						
-					</div>
-	
-</ul>
-<div class="clear"></div>
-	<div class="w3ls-btn">
-
-
-		<input type="submit" name="submit_account" value="Submit Application">
-	
-
-	</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-  </section><!-- #hero -->
-
-  <main id="main">
+        </form>
+       <div class="text-center">
+          <h4><a class="d-block small mt-3"  href="<?php echo base_url(); ?>home_con/home">Return to Homepage</a></h4>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
