@@ -11,6 +11,8 @@ class Pages extends CI_Controller {
 
 		
 	public function inventory () {
+		$this->load->model('categories_model');
+		$data['category'] = $this->categories_model->getCategoriesName();
 		$this->load->model('database');
 		$data['items'] = $this->database->itemList();
 		$data['page'] = 'inventory';
@@ -18,7 +20,6 @@ class Pages extends CI_Controller {
 		$this->load->view('side_menu');
 		$this->load->view('main',$data);
 		$this->load->view('templates/footeradmin');
-		
 	}
 
 	public function sales () {
@@ -36,7 +37,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');
 		$this->load->view('main',$data);
-		$this->load->view('templates/footeradmin');
+		$this->load->view('templates/footeradmin',$data);
 	
 	}
 

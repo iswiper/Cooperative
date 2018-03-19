@@ -31,7 +31,7 @@ class Accounts_con extends CI_Controller {
 
 		}
 	}
-
+/*
 	public function delete($id){
 		$this->load->model('accounts_model');
 		$exec = $this->accounts_model->delete_account($id);
@@ -41,5 +41,5 @@ class Accounts_con extends CI_Controller {
 		}else {
 			$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps... Something Went Wrong Please Try Again.</div>' );
 		}
-	}
+	}*/
 }
