@@ -24,16 +24,16 @@ class Item extends CI_Controller {
 				$this->form_validation->set_rules('price', 'Price', 'required|integer');
 				if($this->form_validation->run() == FALSE) {
 					$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">'.validation_errors() . '</div>');
-					redirect('new_item');
+					redirect('inventory');
 				}else if ($category === 'Select Any') {
 					$this->session->set_flashdata('errorMessage','<div class="alert alert-danger">Please Select A Category </div>');
-					redirect(base_url('new_item'));
+					redirect(base_url('inventory'));
 				}else {
 					$this->load->model('item_model');
 					$this->item_model->insertItem($name, $category, $description, $date_time, $creator, $quantity, $price);
 				}
 			}else {
-				redirect(base_url('new_item'));
+				redirect(base_url('inventory'));
 			}
 		 
 	}
