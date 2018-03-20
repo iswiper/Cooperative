@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2018 at 05:24 AM
+-- Generation Time: Mar 20, 2018 at 02:02 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -42,7 +42,8 @@ CREATE TABLE `accounts` (
 
 INSERT INTO `accounts` (`id`, `username`, `password`, `date_created`, `created_by`) VALUES
 (12, 'Cooperative', '$2y$10$z6FEETw1gx0AVj.4kJOWXeDQs/RRDJf1pWEFJr3C9UUeAXek7mlIm', '2018-03-09 08:39:37 am', 'Cooperative Company'),
-(13, 'Cooperative2', '$2y$10$bR.DHdHSKpm8V7neKNtKqOw38oi2L91vbnT5rQKzD02DUMwciC.Nm', '2018-03-17 11:39:41 am', 'Cooperative Company');
+(13, 'Cooperative2', '$2y$10$bR.DHdHSKpm8V7neKNtKqOw38oi2L91vbnT5rQKzD02DUMwciC.Nm', '2018-03-17 11:39:41 am', 'Cooperative Company'),
+(14, 'Cooperative3', '$2y$10$jzVRCy/gmWcyP3JB7TUZ3OzdwfZskOa.p/S4nXyaoK9Lkj3KtduJq', '2018-03-20 07:56:21 am', 'Cooperative Company');
 
 -- --------------------------------------------------------
 
@@ -81,6 +82,13 @@ CREATE TABLE `customer` (
   `date_created` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `username`, `password`, `date_created`) VALUES
+(1, 'Venjie', 'Mendez', 'bajak@gmail.com', 'binje', '$2y$10$aQbxvuGWXWJikeqOUFtU5uFGw5q4WJzUuQHjRX7D8NreX14eiQ9Km', '2018-03-20 08:07:08 am');
+
 -- --------------------------------------------------------
 
 --
@@ -95,16 +103,17 @@ CREATE TABLE `items` (
   `date_time` varchar(50) NOT NULL,
   `creator` varchar(50) NOT NULL,
   `quantities` int(11) NOT NULL,
-  `price` double NOT NULL
+  `price` double NOT NULL,
+  `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`id`, `name`, `category`, `description`, `date_time`, `creator`, `quantities`, `price`) VALUES
-(2, 'Titanic Gel', 'Gel', '9g Hardens your Hair', '2018-03-09 10:21:46 am', 'Cooperative Company', 801, 80),
-(3, 'tidehunter', 'toothpaste', '9g hardens your teeth', '2018-03-17 11:41:00 am', 'Cooperative Company', 90, 90);
+INSERT INTO `items` (`id`, `name`, `category`, `description`, `date_time`, `creator`, `quantities`, `price`, `status`) VALUES
+(1, 'Titanic Gel', 'Gel', '9g Hardens Your Hair', '2018-03-20 08:46:34 pm', 'Cooperative Company', 891, 90, ''),
+(2, 'Titanicgate', 'toothpaste', '1g Hardens Your teeth', '2018-03-20 08:50:55 pm', 'Cooperative Company', 0, 90, '');
 
 -- --------------------------------------------------------
 
@@ -132,8 +141,7 @@ CREATE TABLE `sales` (
 --
 
 INSERT INTO `sales` (`id`, `sale_id`, `date_time`, `item_id`, `item_name`, `item_price`, `quantity`, `sub_total`, `date`, `month`, `year`, `week`) VALUES
-(2, 393411928, '2018-03-09 10:23:51', '2', 'Titanic Gel', 80, 90, 7200, '2018-03-09', '03', '2018', '10'),
-(3, 68622178, '2018-03-17 11:48:57', '2', 'Titanic Gel', 80, 9, 720, '2018-03-17', '03', '2018', '11');
+(1, 1089775421, '2018-03-20 20:47:45', '1', 'Titanic Gel', 90, 9, 810, '2018-03-20', '03', '2018', '12');
 
 --
 -- Indexes for dumped tables
@@ -177,7 +185,7 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -189,19 +197,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
