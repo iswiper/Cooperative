@@ -24,7 +24,7 @@
 				foreach ($items as $item) {
 					$itemName = urlencode($item->name);
 					$num++;
-					$item_table = $this->table->add_row($num, $item->name, $item->category, $item->description,$item->quantities,$item->status,"
+					$item_table = $this->table->add_row($item->id, $item->name, $item->category, $item->description,$item->quantities,$item->status,"
 					<a href='' data-toggle='modal' data-target='#stockin".$item->id."'><button class='btn btn-primary btn-sm'>STOCK IN</button></a> 
 					<a href='' data-toggle='modal' data-target='#update".$item->name."'><button class='btn btn-info btn-sm btn-update'>UPDATE</button><input type='hidden' value='".$item->id."'></a> 	
 				<a href='' data-toggle='modal' data-target='#delete".$item->id."'><button class='btn btn-info btn-warning btn-sm'>Delete</button></a>");
@@ -178,7 +178,7 @@
 				$num = 0;
 				foreach ($categoryList as $category) {
 					$num += 1;
-					$category_tbl = $this->table->add_row($num, $category->date_time, $category->category, $category->creator,'<a href="'. base_url('delete/category/'.$category->id.'').'"><button class="btn btn-danger btn-sm">Delete </button>');
+					$category_tbl = $this->table->add_row($category->id, $category->date_time, $category->category, $category->creator,'<a href="'. base_url('delete/category/'.$category->id.'').'"><button class="btn btn-danger btn-sm">Delete </button>');
 				}
 				echo '<div id="category_tbl">';
 				echo $category_tbl->generate();

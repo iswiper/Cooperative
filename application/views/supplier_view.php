@@ -13,13 +13,13 @@
 				$tableAttr = array(
 					'table_open' => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">',
 					);
-				$item_table = $this->table->set_heading('Supplier ID','Supplier Company','Product','Location', 'Contact Number','Action');
-				$item_table = $this->table->set_template($tableAttr);
+				$supp_table = $this->table->set_heading('Supplier ID','Supplier Company','Product','Location', 'Contact Number','Action');
+				$supp_table = $this->table->set_template($tableAttr);
 				$num = 0;
 				foreach ($supp as $supplier) {
 					$suppName = urlencode($supplier->supplier_name);
 					$num++;
-					$supp_table = $this->table->add_row($num, $supplier->supplier_name, $supplier->product, $supplier->supplier_location,$supplier->contact,"
+					$supp_table = $this->table->add_row($supplier->id, $supplier->supplier_name, $supplier->product, $supplier->supplier_location,$supplier->contact,"
 					<a href='' data-toggle='modal' data-target='#Supdate".$supplier->supplier_name."'><button class='btn btn-info btn-sm btn-update'>UPDATE</button><input type='hidden' value='".$supplier->id."'></a> 	
 				<a href='' data-toggle='modal' data-target='#Sdelete".$supplier->id."'><button class='btn btn-info btn-warning btn-sm'>Delete</button></a>");
 //=============================================================DELETE MODAL==================================================================================//
@@ -52,11 +52,12 @@
             </button>
           </div>
           <div>
-            '.form_open("supplier_con/supplier_update/$supplier->supplier_name").'
+            '.form_open("supplier_con/supplier_update/$supplier->id").'
   <input type="hidden" name="current_company" value="'. $supplier->supplier_name.'">
-  <input type="hidden" name="current_location" value="'. $supplier->supplier_location.'" >
   <input type="hidden" name="current_product" value="'. $supplier->product.'">
+  <input type="hidden" name="current_location" value="'. $supplier->supplier_location.'" >
   <input type="hidden" name="current_contact" value="'. $supplier->contact.'">
+  
   <div class="form-group">
     <label>&emsp;Supplier Company Name:</label>
     <input type="text" name="update_company" placeholder="Supplier Company Name" class="form-control" value="'. $supplier->supplier_name.'">
@@ -66,6 +67,7 @@
     <label>&emsp;Product:</label>
     <input type="text" name="update_product" placeholder="Product" class="form-control" value="'. $supplier->product.'">
   </div>
+  
   <div class="form-group">
     <label>&emsp;Supplier Company Location:</label>
     <input type="text" name="update_location" placeholder="Supplier Company Location" class="form-control" value="'. $supplier->supplier_location.'">

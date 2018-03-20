@@ -61,11 +61,11 @@ class supplier_con extends CI_Controller {
 	}
 	public function supplier_update($id) {
 		$this->load->model('supplier_model');
-		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
-		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
-		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
-		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
-
+		$this->form_validation->set_rules('update_name', 'Supplier Company Name', 'required');
+		$this->form_validation->set_rules('update_name', 'Supplier Company Name', 'required');
+		$this->form_validation->set_rules('update_name', 'Supplier Company Name', 'required');
+		$this->form_validation->set_rules('update_name', 'Supplier Company Name', 'required');
+		
 		$current_company  = $this->input->post('current_company');
 		$current_product  = $this->input->post('current_product');
 		$current_location = $this->input->post('current_location');
