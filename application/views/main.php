@@ -28,7 +28,9 @@
 						<a href='".base_url("item/stock_in/$itemName")."'><button class='btn btn-primary btn-sm'>STOCK IN</button></a> 
 						<a href='".base_url("item/stock_in/$itemName")."'><button class='btn btn-primary btn-sm'>STOCK OUT</button></a> 
 						<a href='".base_url("item/update/$itemName")."'><button class='btn btn-info btn-sm'>UPDATE</button></a> 
-						<a href='".base_url("item/delete/$item->id")."'><button class='btn btn-info btn-warning btn-sm'>Delete</button></a>");
+					
+						<a href='".base_url("item/delete/$item->id")."'><button class='btn btn-danger'>Delete</button></a>");
+							
 				}
 				echo $this->table->generate($item_table);
 				echo '</div>';

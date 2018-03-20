@@ -31,7 +31,6 @@
 			<th>ID</th>
 			<th>Username</th>
 			<th>Date/Time Created</th>
-			<th>Action</th>
 		</tr>
 		<?php
 		$count = 1; 
