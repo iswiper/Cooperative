@@ -42,13 +42,13 @@ class Item_model extends CI_Model {
 
 	}
 
-	public function update_item($id,$name,$category,$description,$price) {
+	public function update_item($id,$name,$category,$description,$status) {
 		$this->load->database();
 		$data = array(
 			'name' => "$name",
 			'category' => "$category",
 			'description' => "$description",
-			'price' => "$price"
+			'status' => "$status"
 			);
 
 		$this->db->where('id',$id);

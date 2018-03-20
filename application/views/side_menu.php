@@ -19,13 +19,14 @@
           </a>
         </li>
    <!--#############################################COSTUMER################################################################################################-->
-		<li class="nav-item <?php if ($location === 'new_item') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Item" >
+		<!--
+    <li class="nav-item <?php if ($location === 'new_item') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Item" >
           <a class="nav-link <?php if ($location === 'new_item') {echo 'active-text';}?>" href="<?php echo base_url("new_item") ?>">
 		   <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">New Item</span>
           </a>
         </li>
-		
+		-->
 	 <!--#############################################sales################################################################################################--> 
         <li class="nav-item <?php if ($location === 'sales') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="sales" >  
     

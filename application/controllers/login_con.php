@@ -59,19 +59,13 @@ class Login_con extends CI_Controller {
 						);
 					$this->session->set_userdata($userdata);
 					$this->session->set_flashdata('successMessage','<div class="alert alert-success">Login Successfully, Welcome '.$this->session->userdata['username'].'</div>');
-					
-						redirect(base_url('pos'));
-
-					
-				}
-				
+						redirect(base_url('pages2/dash'));					
+				}				
 				else {
 					$this->session->set_flashdata('errorMessage','<div class="alert alert-danger">Incorrect Login Name Or Password</div>');
 				redirect(base_url('home_con/home'));
 				}
-			}
-			
-			
+			}			
 			else {
 				$this->session->set_flashdata('errorMessage','<div class="alert alert-danger">Incorrect Login Name Or Password</div>');
 				redirect(base_url('home_con/home'));

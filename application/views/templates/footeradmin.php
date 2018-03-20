@@ -5,6 +5,8 @@
         </div>
       </div>
     </footer>
+   
+    <!--===========================================LOGOUT MODAL====================================================================-->
 	 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -22,7 +24,7 @@
         </div>
       </div>
     </div>
-
+  <!--==========================================NEW ITEM MODAL==============================================================-->
     <div class="modal fade" id="newitem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -50,6 +52,11 @@
         'name' => 'price',
         'placeholder' => 'Item Price'
         );
+      $statAttr = array(
+        'class' => 'form-control',
+        'name' => 'status',
+        'placeholder' => 'Item Status'
+        );
       $submitAttr = array(
         'class' => 'btn btn-primary',
         'name' => 'submit_item',
@@ -75,13 +82,17 @@
         <option value="<?php echo $cat->category; ?>"><?php echo $cat->category; ?></option>
         <?php
       }
-      echo form_input($categoryAttr);
       echo "</select>";
       echo '</div>';
       //PRICE
-      echo '<div class="form-group">';
+      /*echo '<div class="form-group">';
       echo form_label('&emsp;Price:');
       echo form_input($priceAttr);
+      echo '</div>';*/
+      //status
+      echo '<div class="form-group">';
+      echo form_label('&emsp;Status:');
+      echo form_input($statAttr);
       echo '</div>';
       
       //description
@@ -89,21 +100,105 @@
       echo form_label('&emsp;Description:');
       echo '<textarea name="description" class="form-control" rows="5" placeholder="Item Description"></textarea>';
       echo '</div>';
-      echo '<div class="form-group">';
-      echo form_input($submitAttr);
-      echo '</div>';
-      echo '</div>';
-      echo form_close();
-      echo '</div>';
+
     
             
             ?>
           </div>
           <div class="modal-footer">
-      </div>
+        <?php
+
+      echo '<div class="form-group">';
+      echo form_input($submitAttr);
+      echo ' <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>';
+      echo '</div>';
+      echo '</div>';
+      echo form_close();
+      echo '</div>';
+              ?>
+
+          </div>
         </div>
       </div>
     </div>
+<!--==========================================SUPPLIER MODAL==============================================================-->
+<div class="modal fade" id="supplier" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class=""><h1>New Supplier</h1></div>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+          </button>
+      </div>
+      <div>
+      <?php 
+            $nameAttr = array(
+              'class' => 'form-control',
+              'type' => 'text',
+              'placeholder' => 'Supplier Company Name',
+              'name' => 'suppName'
+              );
+            $prodAttr = array(
+              'class' => 'form-control',
+              'name' => 'prod',
+              'placeholder' => 'Product'
+              );
+            $locationAttr = array(
+              'class' => 'form-control',
+              'name' => 'location',
+              'placeholder' => 'Company Location'
+              );
+            $contactAttr = array(
+              'class' => 'form-control',
+              'name' => 'contact',
+              'placeholder' => 'Contact Number'
+              );
+            $submitAttr = array(
+              'class' => 'btn btn-primary',
+              'name' => 'submit_item',
+              'type' => 'submit',
+              'value' => 'Add Supplier'
+              );
+
+            echo $this->session->flashdata('errorMessage');
+            echo $this->session->flashdata('successMessage');
+            echo form_open('supplier_con/addSupplier');
+            //SUPPLIER NAME
+            echo '<div class="form-group">';
+            echo form_label('&emsp;Supplier Company Name:');
+            echo form_input($nameAttr);
+            echo '</div>';
+            //SUPPLIER product
+            echo '<div class="form-group">';
+            echo form_label('&emsp;Product:');
+            echo form_input($prodAttr);
+            echo '</div>';
+            //SUPPLIER location
+            echo '<div class="form-group">';
+            echo form_label('&emsp;Supplier Company Location:');
+            echo form_input($locationAttr);
+            echo '</div>';
+            //SUPPLIER product
+            echo '<div class="form-group">';
+            echo form_label('&emsp;Contact Number:');
+            echo form_input($contactAttr);
+            echo '</div>';  
+      ?>
+      </div>
+      <div class="modal-footer">
+      <?php
+          echo '<div class="form-group">';
+          echo form_input($submitAttr);
+          echo ' <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>';
+          echo '</div>';
+          echo '</div>';
+          echo form_close();
+      ?>
+      </div>
+    </div>
+  </div>
+</div>
     
 
     <!-- Bootstrap core JavaScript-->
