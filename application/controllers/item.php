@@ -105,7 +105,7 @@ class Item extends CI_Controller {
 		$this->form_validation->set_rules('update_name', 'Item Name', 'required');
 		$this->form_validation->set_rules('update_name', 'Item Name', 'required');
 		$this->form_validation->set_rules('update_name', 'Item Name', 'required');
-
+		
 		$current_name = $this->input->post('current_name');
 		$current_category = $this->input->post('current_category');
 		$current_description = strtolower($this->input->post('current_description'));
