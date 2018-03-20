@@ -14,6 +14,8 @@
 				
 				echo $this->table->generate($item_table);
 		}
+		
+		
 		?>
 </div>
 <div class="clearfix"></div>
