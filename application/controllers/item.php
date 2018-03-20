@@ -18,10 +18,11 @@ class Item extends CI_Controller {
 				$description = $this->input->post('description');
 				$creator = 'Cooperative Company';
 				$quantity = 0;
-				$price = $this->input->post('price');
+				//$price = $this->input->post('price');
+				$stat = $this->input->post('status');
 				$this->form_validation->set_rules('item_name', 'Item Name', 'required|min_length[3]');
 				$this->form_validation->set_rules('description', 'Description', 'required|max_length[100]');
-				$this->form_validation->set_rules('price', 'Price', 'required|integer');
+				$this->form_validation->set_rules('status', 'Status', 'required|max_length[10]');
 				if($this->form_validation->run() == FALSE) {
 					$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">'.validation_errors() . '</div>');
 					redirect('inventory');
@@ -30,7 +31,7 @@ class Item extends CI_Controller {
 					redirect(base_url('inventory'));
 				}else {
 					$this->load->model('item_model');
-					$this->item_model->insertItem($name, $category, $description, $date_time, $creator, $quantity, $price);
+					$this->item_model->insertItem($name, $category, $description, $date_time, $creator, $quantity,$status);
 				}
 			}else {
 				redirect(base_url('inventory'));
@@ -49,7 +50,6 @@ class Item extends CI_Controller {
 			redirect(base_url('inventory'));
 		}
 	}
-
 	public function stock_in($item_name) {
 		$data['item_name'] = $item_name;
 		$this->load->model('item_model');
@@ -109,14 +109,14 @@ class Item extends CI_Controller {
 		$current_name = $this->input->post('current_name');
 		$current_category = $this->input->post('current_category');
 		$current_description = strtolower($this->input->post('current_description'));
-		$current_price = $this->input->post('current_price');
+		$current_status= $this->input->post('current_status');
 
 		$updated_name = $this->input->post('update_name');
 		$updated_category = $this->input->post('update_category');
 		$updated_desc = strtolower($this->input->post('update_description'));
-		$updated_price = $this->input->post('update_price');
+		$updated_status = $this->input->post('update_status');
 
-		if ($current_name === $updated_name && $current_category === $updated_category && $current_price === $updated_price && $current_description === $updated_desc) {
+		if ($current_name === $updated_name && $current_category === $updated_category && $current_status === $updated_status && $current_description === $updated_desc) {
 			$this->session->set_flashdata('successMessage', '<div class="alert alert-info">No Changes</div>');
 					redirect(base_url('inventory'));
 		}else {
@@ -125,7 +125,7 @@ class Item extends CI_Controller {
 					redirect(base_url('inventory'));
 			}else {
 				$this->load->model('item_model');
-				$update = $this->item_model->update_item($id,$updated_name,$updated_category,$updated_desc,$updated_price);
+				$update = $this->item_model->update_item($id,$updated_name,$updated_category,$updated_desc,$updated_status);
 				if ($update) {
 					$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Item Updated</div>');
 					redirect(base_url('inventory'));
