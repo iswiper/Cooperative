@@ -5,23 +5,24 @@
 			?>
       <br>
         <span class="glyphicon glyphicon-user"></span>
-        <p style="text-align: center; color: #337ab7; font-size: 25px;"><?php $user=$this->session->userdata('username'); echo $user; ?></p>
+        <h1 ><?php $user=$this->session->userdata('username'); echo $user; ?></h1>
       <div>
         <?php 
         foreach ($customer as $row)
-        { $uname = urlencode($row->username);
+        {   
             echo '<label>Name: </label>'," ",$row->first_name," ",$row->last_name;
             echo '<br><label>Email: </label>'," ",$row->email,'</br>' ;
-            //update button on progress
         }
         ?>
       </div>
 	 <!--#############################################dash################################################################################################-->
-        <li class="nav-item <?php if ($location === 'inventory' || $location === 'item') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Inventory" >
-          <a class="<?php if ($location === 'dash') {echo 'active-text';}?>" href="<?php echo base_url() ?>pages2/dash">
-        <span class="glyphicon glyphicon-folder-close"></span><br>My Purchases</a>
+      
+        <li class="nav-item <?php if ($location === 'dash') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Dashboard" >
+          <a class="nav-link <?php if ($location === 'dash') {echo 'active-text';}?>" href="<?php echo base_url() ?>pages2/dash">
+            <i class="fa fa-table"></i><span class="nav-link-text">My Purchases</span>
           </a>
         </li>
+
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="logout">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>

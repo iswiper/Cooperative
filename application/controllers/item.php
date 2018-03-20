@@ -18,7 +18,7 @@ class Item extends CI_Controller {
 				$description = $this->input->post('description');
 				$creator = 'Cooperative Company';
 				$quantity = 0;
-				$price = $this->input->post('price');
+				//$price = $this->input->post('price');
 				$stat = $this->input->post('status');
 				$this->form_validation->set_rules('item_name', 'Item Name', 'required|min_length[3]');
 				$this->form_validation->set_rules('description', 'Description', 'required|max_length[100]');
@@ -50,7 +50,6 @@ class Item extends CI_Controller {
 			redirect(base_url('inventory'));
 		}
 	}
-
 	public function stock_in($item_name) {
 		$data['item_name'] = $item_name;
 		$this->load->model('item_model');

@@ -25,10 +25,9 @@
 					$itemName = urlencode($item->name);
 					$num++;
 					$item_table = $this->table->add_row($num, $item->name, $item->category, $item->description,$item->quantities,$item->status,"
-					<a href='".base_url("item/stock_in/$itemName")."'><button class='btn btn-primary btn-sm'>STOCK IN</button></a> 
-					<a href='".base_url("item/stock_in/$itemName")."'><button class='btn btn-primary btn-sm'>STOCK OUT</button></a> 
+					<a href='' data-toggle='modal' data-target='#stockin".$item->id."'><button class='btn btn-primary btn-sm'>STOCK IN</button></a> 
 					<a href='' data-toggle='modal' data-target='#update".$item->name."'><button class='btn btn-info btn-sm btn-update'>UPDATE</button><input type='hidden' value='".$item->id."'></a> 	
-				<a href='' data-toggle='modal' data-target='#delete".$item->id."'><button class='btn btn-info btn-warning btn-sm'>Delete</button></a>");
+				<a href='' data-toggle='modal' data-target='#delete".$item->id."'><button class='btn btn-info btn-warning btn-sm'>DELETE</button></a>");
 //======================================================================================DELETE MODAL==================================================================================//
 				echo '<div class="modal fade" id="delete'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					      <div class="modal-dialog" role="document">
@@ -39,6 +38,7 @@
 					              <span aria-hidden="true">×</span>
 					            </button>
 					          </div>
+
 					          <div class="modal-footer">
 					            <a class="btn btn-primary" href="'.base_url("item/delete/".$item->id).'">Delete</a>
 					      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
@@ -46,7 +46,41 @@
 					        </div>
 					      </div>
 					    </div>'	;
+//======================================================================================STOCKIN MODAL==================================================================================//
+					echo '<div class="modal fade" id="stockin'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					      <div class="modal-dialog" role="document">
+					        <div class="modal-content">
+					          <div class="modal-header">
+					            <h5 class="modal-title" id="exampleModalLabel">Add Stock/s </h5>
+					            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					              <span aria-hidden="true">×</span>
+					            </button>
+					          </div>
 
+							<div class="col-sm-6">';								
+								$attribute = array(
+									'class' => ''
+									);
+								echo form_open('item/add_stocks/$item->id'); 
+								echo form_fieldset('<h3 class="text-primary">Add Stock/s </h3>');
+								echo $this->session->flashdata('errorMessage');
+								echo $this->session->flashdata('successMessage');
+															 
+								echo '<div class="form-group">
+								<label>Stock In</label>
+									<input type="text" name="stocks" class="form-control" placeholder="Enter Stocks To Add">
+									<input type="hidden" name="item_name" value="<?php echo $item_name; ?>">
+								</div>';
+								echo form_close();
+							echo '</div>
+
+					        <div class="modal-footer">
+								<input type="submit" class="btn btn-primary" name="submit_stocks" value="Add">					
+					      		<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+					      	</div>
+					        </div>
+					      </div>
+					    </div>'	;
 //======================================================================================UPDATE MODAL==================================================================================//
 				echo '	<div class="modal fade" id="update'.$item->name.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -125,7 +159,7 @@
 			echo '</div>';
 			echo '<div class="form-group">';
 			echo form_input(array('name' => 'submit','type' => 'submit', 'value' => 'Add category', 'class' => 'btn btn-primary btn-md'));
-			echo '</div>';
+			echo '</div>'; 
 			echo form_fieldset_close();
 			echo form_close();
 			echo '</div>';
@@ -204,82 +238,6 @@
 			echo '</div>';
 			echo '</div>';
 		}
-//====================================================================================================
-	/*	else if ($page === 'new_item') {
-			echo '<div class="card mb-3">';
-			$nameAttr = array(
-				'class' => 'form-control',
-				'type' => 'text',
-				'placeholder' => 'Item Name',
-				'name' => 'item_name'
-				);
-			$categoryAttr = array(
-				'class' => 'form-control',
-				'name' => 'category'
-				);
-			$priceAttr = array(
-				'class' => 'form-control',
-				'name' => 'price',
-				'placeholder' => 'Item Price'
-				);
-			$submitAttr = array(
-				'class' => 'btn btn-primary',
-				'name' => 'submit_item',
-				'type' => 'submit',
-				'value' => 'Register Item'
-				);
-
-			echo $this->session->flashdata('errorMessage');
-			echo $this->session->flashdata('successMessage');
-			echo form_open('item/item_con');
-			echo form_fieldset('<div class="card-header"><h1>New Item</h1></div>');
-			//ITEM NAME
-			echo '<div class="form-group">';
-			echo form_label('&emsp;Item Name:');
-			echo form_input($nameAttr);
-			echo '</div>';
-			//CATEGORY
-			echo '<div class="form-group">';
-			echo form_label('&emsp;Category:');
-			echo "<select class='form-control' name='category'>";
-			echo '<option value="Select Any" selected="selected">Select Any</option>';
-			foreach ($category as $cat) {
-				?>
-				<option value="<?php echo $cat->category; ?>"><?php echo $cat->category; ?></option>
-				<?php
-			}
-			echo "</select>";
-			echo '</div>';
-			//SUPPLIER
-			echo '<div class="form-group">';
-			echo form_label('&emsp;Supplier:');
-			echo "<select class='form-control' name='category'>";
-			echo '<option value="Select Any" selected="selected">Select Any</option>';
-			foreach ($category as $cat) {
-				?>
-				<option value="<?php echo $cat->category; ?>"><?php echo $cat->category; ?></option>
-				<?php
-			}
-			echo "</select>";
-			echo '</div>';
-			//PRICE
-			echo '<div class="form-group">';
-			echo form_label('&emsp;Price:');
-			echo form_input($priceAttr);
-			echo '</div>';
-			
-			//description
-			echo '<div class="form-group">';
-			echo form_label('&emsp;Description:');
-			echo '<textarea name="description" class="form-control" rows="5" placeholder="Item Description"></textarea>';
-			echo '</div>';
-			echo '<div class="form-group">';
-			echo form_input($submitAttr);
-			echo '</div>';
-			echo '</div>';
-			echo form_close();
-			echo '</div>';
-		}*/
 		?>
 	
 

@@ -13,6 +13,7 @@ class Item_model extends CI_Model {
 			);
 		$this->load->database();
 		$sql = $this->db->insert('items', $data);
+		//
 		if ($sql) {
 			$this->session->set_flashdata('successMessage', '<div class="alert alert-success">New Item Has Been Added</div>');
 			$this->session->set_flashdata('successMessage', '<div class="alert alert-success">New Item Has Been Added Successfully </div>');
