@@ -7,6 +7,7 @@
     </footer>
    
     <!--===========================================LOGOUT MODAL====================================================================-->
+	 
 	 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -17,14 +18,39 @@
             </button>
           </div>
           <div class="modal-footer">
-            <a class="btn btn-primary" href="<?php echo base_url("logout/out") ?>">Logout</a>
+            <a class="btn btn-primary" href="<?php echo base_url("logout/out") ?>">Yes</a>
   <!--    <li id="log-out" class="list-side-group-item"><a href=""> -->
-      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+      <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
       </div>
         </div>
       </div>
     </div>
   <!--==========================================NEW ITEM MODAL==============================================================-->
+	
+	<div class="modal fade" id="del" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete This Item?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-footer">
+           
+	<!--		<a class="btn btn-primary" href='".base_url("item/delete/$item->id")."'>Yes</a> -->
+			<a href='".base_url("item/delete/$item->id")."'><button class='btn btn-info btn-warning btn-sm'>Delete</button></a>");
+  <!--    <li id="log-out" class="list-side-group-item"><a href=""> -->
+      <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+      </div>
+        </div>
+      </div>
+    </div>
+
+	
+	
+
+    <!--new item modal-->
     <div class="modal fade" id="newitem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -84,6 +110,17 @@
       }
       echo "</select>";
       echo '</div>';
+      	echo '<div class="form-group">';
+			echo form_label('&emsp;Category:');
+			echo "<select class='form-control' name='category'>";
+			echo '<option value="Select Any" selected="selected">Select Any</option>';
+			foreach ($category as $cat) {
+				?>
+				<option value="<?php echo $cat->category; ?>"><?php echo $cat->category; ?></option>
+				<?php
+			}
+			echo "</select>";
+			echo '</div>';
       //PRICE
       /*echo '<div class="form-group">';
       echo form_label('&emsp;Price:');
