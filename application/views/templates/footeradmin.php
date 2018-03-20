@@ -110,18 +110,7 @@
       }
       echo "</select>";
       echo '</div>';
-      	echo '<div class="form-group">';
-			echo form_label('&emsp;Category:');
-			echo "<select class='form-control' name='category'>";
-			echo '<option value="Select Any" selected="selected">Select Any</option>';
-			foreach ($category as $cat) {
-				?>
-				<option value="<?php echo $cat->category; ?>"><?php echo $cat->category; ?></option>
-				<?php
-			}
-			echo "</select>";
-			echo '</div>';
-     
+      	
       //status
       echo '<div class="form-group">';
       echo form_label('&emsp;Status:');
