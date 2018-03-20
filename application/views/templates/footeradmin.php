@@ -121,11 +121,7 @@
 			}
 			echo "</select>";
 			echo '</div>';
-      //PRICE
-      /*echo '<div class="form-group">';
-      echo form_label('&emsp;Price:');
-      echo form_input($priceAttr);
-      echo '</div>';*/
+     
       //status
       echo '<div class="form-group">';
       echo form_label('&emsp;Status:');

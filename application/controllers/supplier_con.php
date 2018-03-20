@@ -46,9 +46,56 @@ class supplier_con extends CI_Controller {
 				}
 			}else {
 				redirect(base_url('supplier_con/supplier'));
-			}
-		 
+			} 
 	}
+	public function delete($id){
+		$this->load->model('supplier_model');
+		$del_supp = $this->supplier_model->deleteSupplier($id);
+		if ($del_supp) {
+			$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Supplier Deleted</div>');
+			redirect(base_url('supplier_con/supplier'));
+		}else {
+			$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps Something Went Wrong!!</div>');
+			redirect(base_url('supplier_con/supplier'));
+		}
+	}
+	public function supplier_update($id) {
+		$this->load->model('supplier_model');
+		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
+		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
+		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
+		$this->form_validation->set_rules('update_name', 'supplier Name', 'required');
+
+		$current_company  = $this->input->post('current_company');
+		$current_product  = $this->input->post('current_product');
+		$current_location = $this->input->post('current_location');
+		$current_contact  = $this->input->post('current_contact');
+
+		$updated_company  = $this->input->post('updated_company');
+		$updated_product  = $this->input->post('updated_product');
+		$updated_location = $this->input->post('updated_location');
+		$updatedt_contact = $this->input->post('updated_contact');
+
+		
+
+		if ($current_company === $updated_company && $current_product === $updated_product && $current_location === $updated_location && $current_contact === $updated_contact) {
+			$this->session->set_flashdata('successMessage', '<div class="alert alert-info">No Changes.</div>');
+					redirect(base_url('supplier_con/supplier'));
+		}else {
+			if ($this->form_validation->run() == FALSE) {
+				$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opss Something Went Wrong Updating the Supplier!! Please Try Again.</div>');
+					redirect(base_url('supplier_con/supplier'));
+			}else {
+				$this->load->model('supplier_model');
+				$update = $this->supplier_model->update_supplier($id,$updated_company,$updated_product,$updated_location,$updated_contact);
+				if ($update) {
+					$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Item Updated</div>');
+					redirect(base_url('supplier_con/supplier'));
+				}
+			}
+		}		
+	}
+
 }
 
 ?>
