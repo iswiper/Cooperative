@@ -39,7 +39,8 @@
     <div class="hero-container">
       <h1>Welcome to Cooperative</h1>
       <h2>A website to purchase goods in afforadable price.</h2>
-      
+		<?php echo $this->session->flashdata('errorMessage') ?>
+
 	  
     </div>
   </section><!-- #hero -->
