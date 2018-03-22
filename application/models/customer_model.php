@@ -47,8 +47,7 @@ class customer_model extends CI_Model {
 
 	public function login($username) {
 		$this->load->database();
-		$sql = $this->db->where('username',$username)
-						->get('customer');
+		$sql = $this->db->where('username',$username)->get('customer');
 	 	return $row = $sql->row();
 	}
 }

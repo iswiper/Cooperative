@@ -15,6 +15,8 @@ class Pages extends CI_Controller {
 		$data['category'] = $this->categories_model->getCategoriesName();
 		$this->load->model('database');
 		$data['items'] = $this->database->itemList();
+		$this->load->model('item_model');
+		$data['stat'] = $this->item_model->getStat();
 		$data['page'] = 'inventory';
 		$this->load->view('templates/headeradmin',$data);
 		$this->load->view('side_menu');

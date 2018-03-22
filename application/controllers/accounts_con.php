@@ -15,7 +15,7 @@ class Accounts_con extends CI_Controller {
 			$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger"> '.validation_errors() . '</div>');
 			redirect(base_url('accounts'));
 		}else {
-			$this->load->model('database');
+			$thi;s->load->model('database');
 			$this->load->model('accounts_model');
 			$date_created = $this->database->getDateTime();
 			$username = $this->input->post('Username');

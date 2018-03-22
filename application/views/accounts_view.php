@@ -40,7 +40,7 @@
 			<?php
 			$id = $account->id;
 			?>
-			<td><?php echo $count++; ?></td>
+			<td><?php echo $id; ?></td>
 			<td><?php echo $account->username ?></td>
 			<td><?php echo $account->date_created ?></td>
 			<td><!--<a href="<?php echo base_url("accounts_con/delete/$id"); ?>" class="btn btn-danger">Delete</a>--></td>

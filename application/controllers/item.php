@@ -20,9 +20,9 @@ class Item extends CI_Controller {
 				$quantity = 0;
 				//$price = $this->input->post('price');
 				$stat = $this->input->post('status');
-				$this->form_validation->set_rules('item_name', 'Item Name', 'required|min_length[3]');
-				$this->form_validation->set_rules('description', 'Description', 'required|max_length[100]');
-				$this->form_validation->set_rules('status', 'Status', 'required|max_length[10]');
+				$this->form_validation->set_rules('item_name', 'Item Name', 'required');
+				$this->form_validation->set_rules('description', 'Description', 'required');
+				$this->form_validation->set_rules('stat', 'Status', 'required');
 				if($this->form_validation->run() == FALSE) {
 					$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">'.validation_errors() . '</div>');
 					redirect('inventory');
@@ -31,7 +31,7 @@ class Item extends CI_Controller {
 					redirect(base_url('inventory'));
 				}else {
 					$this->load->model('item_model');
-					$this->item_model->insertItem($name, $category, $description, $date_time, $creator, $quantity,$status);
+					$this->item_model->insertItem($name, $category, $description, $date_time, $creator, $quantity,$stat);
 				}
 			}else {
 				redirect(base_url('inventory'));
@@ -49,15 +49,6 @@ class Item extends CI_Controller {
 			$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps Something Went Wrong</div>');
 			redirect(base_url('inventory'));
 		}
-	}
-	public function stock_in($item_name) {
-		$data['item_name'] = $item_name;
-		$this->load->model('item_model');
-		$data['item_info'] = $this->item_model->item_info(urldecode($item_name));
-		$this->load->view('templates/headeradmin');
-		$this->load->view('side_menu');
-		$this->load->view('stock_in_view',$data);
-		$this->load->view('templates/footeradmin');
 	}
 
 	public function add_stocks() {
@@ -88,15 +79,27 @@ class Item extends CI_Controller {
 		}
 	}
 
-	public function update($name) {
-		$this->load->model('categories_model');
-		$data['category'] = $this->categories_model->getCategoriesName();
+
+
+	public function addStocksM($id) {
 		$this->load->model('item_model');
-		$data['item'] = $this->item_model->item_info($name);
-		$this->load->view('templates/headeradmin');
-		$this->load->view('side_menu');
-		$this->load->view('item_update_view.php',$data);
-		$this->load->view('templates/footeradmin');
+		$this->form_validation->set_rules('stocks', 'Stocks', 'required');
+		$name = $this->input->post('item_name');
+		$stocks = 3;
+
+			if ($this->form_validation->run() == FALSE) {
+				$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opss Something Went Wrong Updating The Item. Please Try Again.</div>');
+					redirect(base_url('inventory'));
+			}else {
+				$id = urldecode($name);
+				$this->load->model('item_model');
+				$update = $this->item_model->addStocksM($id,$stocks);
+				if ($update) {
+					$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Item Updated</div>');
+					redirect(base_url('inventory'));
+				}
+			}
+			
 	}
 
 	public function item_update($id) {
