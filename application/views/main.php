@@ -27,7 +27,7 @@
 					$item_table = $this->table->add_row($item->id, $item->name, $item->category, $item->description,$item->quantities,$item->status,"
 					<a href='' data-toggle='modal' data-target='#stockin".$item->id."'><button class='btn btn-primary btn-sm'>STOCK IN</button></a> 
 					<a href='' data-toggle='modal' data-target='#update".$item->name."'><button class='btn btn-info btn-sm btn-update'>UPDATE</button><input type='hidden' value='".$item->id."'></a> 	
-				<a href='' data-toggle='modal' data-target='#delete".$item->id."'><button class='btn btn-info btn-warning btn-sm'>Delete</button></a>");
+				<a href='' data-toggle='modal' data-target='#delete".$item->id."'><button class='btn btn-info btn-warning btn-sm'>DELETE</button></a>");
 //=============================================================DELETE MODAL==================================================================================//
 				echo '<div class="modal fade" id="delete'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					      <div class="modal-dialog" role="document">
@@ -47,7 +47,7 @@
 					      </div>
 					    </div>'	;
 //=========================================================STOCKIN MODAL==================================================================================//
-					echo '<div class="modal fade" id="stock_in'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					echo '<div class="modal fade" id="stockin'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					      <div class="modal-dialog" role="document">
 					        <div class="modal-content">
 					          <div class="modal-header">
@@ -135,34 +135,7 @@
         </div>
       </div>
     </div>';
- //==========================================================Stockin2 MODAL==================================================================================//
-				echo '	<div class="modal fade" id="stockin'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Stock/s</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div>
-            '.form_open("item/addStocksM/$item->id").'
-			  <input type="hidden" name="current_name" value="'. $item->quantities.'">
-			  <div class="form-group">
-			    <label>&emsp;Stocks:</label>
-			    <input type="text" name="stocks" placeholder="Enter Shit add" class="form-control" >
-			  </div>
-		   </div>
-			    <div class="modal-footer">
-				  	<div class="form-group">
-				   		<input type="submit" name="submit" value="ADD" class="btn btn-primary">
-				        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-			  		</div>
-			  	  	'.form_close().'
-      			</div>
-        </div>
-      </div>
-    </div>';
+ 
     					}
 				echo $this->table->generate($item_table);
 				echo '</div>';
@@ -208,7 +181,27 @@
 				$num = 0;
 				foreach ($categoryList as $category) {
 					$num += 1;
-					$category_tbl = $this->table->add_row($category->id, $category->date_time, $category->category, $category->creator,'<a href="'. base_url('delete/category/'.$category->id.'').'"><button class="btn btn-danger btn-sm">Delete </button>');
+					$category_tbl = $this->table->add_row($category->id, $category->date_time, $category->category, $category->creator,
+"	<a href='' data-toggle='modal' data-target='#delCAT".$category->id."'><button class='btn btn-info btn-warning btn-sm'>DELETE</button></a>
+						");
+//=============================================================DELETE MODAL==================================================================================//
+				echo '<div class="modal fade" id="delCAT'.$category->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					      <div class="modal-dialog" role="document">
+					        <div class="modal-content">
+					          <div class="modal-header">
+					            <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this?</h5>
+					            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					              <span aria-hidden="true">×</span>
+					            </button>
+					          </div>
+
+					          <div class="modal-footer">
+					            <a class="btn btn-primary" href="'.base_url("category/delete/".$category->id).'">Delete</a>
+					      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+					      </div>
+					        </div>
+					      </div>
+					    </div>'	;
 				}
 				echo '<div id="category_tbl">';
 				echo $category_tbl->generate();

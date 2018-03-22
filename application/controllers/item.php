@@ -81,26 +81,6 @@ class Item extends CI_Controller {
 
 
 
-	public function addStocksM($id) {
-		$this->load->model('item_model');
-		$this->form_validation->set_rules('stocks', 'Stocks', 'required');
-		$name = $this->input->post('item_name');
-		$stocks = 3;
-
-			if ($this->form_validation->run() == FALSE) {
-				$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opss Something Went Wrong Updating The Item. Please Try Again.</div>');
-					redirect(base_url('inventory'));
-			}else {
-				$id = urldecode($name);
-				$this->load->model('item_model');
-				$update = $this->item_model->addStocksM($id,$stocks);
-				if ($update) {
-					$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Item Updated</div>');
-					redirect(base_url('inventory'));
-				}
-			}
-			
-	}
 
 	public function item_update($id) {
 		$this->load->model('item_model');
