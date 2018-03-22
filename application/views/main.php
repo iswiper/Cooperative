@@ -47,7 +47,7 @@
 					      </div>
 					    </div>'	;
 //=========================================================STOCKIN MODAL==================================================================================//
-					echo '<div class="modal fade" id="stockin'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					echo '<div class="modal fade" id="stock_in'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					      <div class="modal-dialog" role="document">
 					        <div class="modal-content">
 					          <div class="modal-header">
@@ -56,28 +56,25 @@
 					              <span aria-hidden="true">×</span>
 					            </button>
 					          </div>
+									<div class="col-sm-6">';
+									$attribute = array(
+										'class' => ''
+										);
 
-							<div class="col-sm-6">';								
-								$attribute = array(
-									'class' => ''
-									);
-								echo form_open('item/add_stocks/$item->id'); 
-								echo form_fieldset('<h3 class="text-primary">Add Stock/s </h3>');
-								echo $this->session->flashdata('errorMessage');
-								echo $this->session->flashdata('successMessage');
-															 
-								echo '<div class="form-group">
-								<label>Stock In</label>
-									<input type="text" name="stocks" class="form-control" placeholder="Enter Stocks To Add">
-									<input type="hidden" name="item_name" value="<?php echo $item_name; ?>">
-								</div>';
-								echo form_close();
-							echo '</div>
+									echo form_open('item/add_stocks',$attribute); 
+									echo form_fieldset('<h3 class="text-primary">Add Stock/s </h3>');
+									 
+									echo '<div class="form-group">
+									<label>Stock In</label>
+										<input type="text" name="stocks" class="form-control" placeholder="Enter Stocks To Add">
+										<input type="hidden" name="item_name" value="'.$item->name.'">
+									</div>
+									<div class="form-group">
+										<input type="submit" class="btn btn-primary" name="submit_stocks" value="Add">
+									</div>
+									'.form_close().'
+									</div>
 
-					        <div class="modal-footer">
-								<input type="submit" class="btn btn-primary" name="submit_stocks" value="Add">					
-					      		<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-					      	</div>
 					        </div>
 					      </div>
 					    </div>'	;
@@ -114,22 +111,55 @@
 			  </div>
 			  <div class="form-group">
 			    <label>&emsp;Status:</label>
-			    <input type="text" name="update_status" placeholder="Item Status" class="form-control" value="'. $item->status.'">
+			    <select class="form-control" name="update_status">';
+			    foreach ($stat as $status) {
+			       echo '<option value="'. $status->status_name.'"'; 
+			        if($status->status_name == $item->status){
+			        	echo "selected = selected";} echo '>'.$status->status_name.'</option>';
+			        } 
+			        echo '</select>
 			  </div>
+			  
 			  <div class="form-group">
 			    <label>&emsp;Description:</label>
 			    <textarea name="update_description" class="form-control" rows="5">'. $item->description.'</textarea>
 			  </div>
 			          </div>
-			          <div class="modal-footer">
-			  <!--    <li id="log-out" class="list-side-group-item"><a href=""> -->
-			  	  <div class="form-group">
-			    <input type="submit" name="submit" value="Update" class="btn btn-primary">
-			            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-		  </div>
-
-  '.form_close().'
+			    <div class="modal-footer">
+				  	<div class="form-group">
+				   		<input type="submit" name="submit" value="Update" class="btn btn-primary">
+				        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+			  		</div>
+			  	  	'.form_close().'
+      			</div>
+        </div>
       </div>
+    </div>';
+ //==========================================================Stockin2 MODAL==================================================================================//
+				echo '	<div class="modal fade" id="stockin'.$item->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Stock/s</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div>
+            '.form_open("item/addStocksM/$item->id").'
+			  <input type="hidden" name="current_name" value="'. $item->quantities.'">
+			  <div class="form-group">
+			    <label>&emsp;Stocks:</label>
+			    <input type="text" name="stocks" placeholder="Enter Shit add" class="form-control" >
+			  </div>
+		   </div>
+			    <div class="modal-footer">
+				  	<div class="form-group">
+				   		<input type="submit" name="submit" value="ADD" class="btn btn-primary">
+				        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+			  		</div>
+			  	  	'.form_close().'
+      			</div>
         </div>
       </div>
     </div>';

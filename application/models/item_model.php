@@ -20,7 +20,12 @@ class Item_model extends CI_Model {
 			redirect(base_url('inventory'));
 		}
 	}
-
+public function getStat(){
+		$this->load->database();
+		$sql = $this->db->select('status_name')
+						->get('status');
+		return $sql->result();
+	}
 	public function deleteItem($id) {
 		$this->load->database();
 		$sql = $this->db->where('id', $id)
@@ -28,12 +33,21 @@ class Item_model extends CI_Model {
 		return $sql;
 		
 	}
+	public function addStocksM($id,$stocks){
+		$this->load->database();
+		$data = array(
+			'quantities' => "$stocks"
+			);
 
-	public function add_stocks($itemName,$stocks) {
+		$this->db->where('id',$id);
+		return $this->db->update('items',$data);
+
+	}
+	public function add_stocks($id,$stocks) {
 		$this->load->database();
 		$sql = $this->db->query("UPDATE items SET quantities = quantities + ".$this->db->escape($stocks)." WHERE name = ".$this->db->escape($itemName)."");
 		return $sql;
-
+		
 	}
 
 	public function item_info($itemName) {

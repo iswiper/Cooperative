@@ -15,10 +15,8 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/Admin/vendor/datatables/dataTables.bootstrap4.css');?>" >
   <!-- Custom styles for this template-->
   <link rel="stylesheet" href="<?php echo base_url('assets/Admin/css/sb-admin.css');?>" >
-	
-  <!-- Favicons -->
-  
-  <link href="<?php echo base_url();?>assets/Home/img/favicon.png" rel="icon">
+	  <!-- Favicons -->
+    <link href="<?php echo base_url();?>assets/Home/img/favicon.png" rel="icon">
   
   <link href="<?php echo base_url();?>assets/Home/img/apple-touch-icon.png" rel="apple-touch-icon">
 	
