@@ -21,5 +21,17 @@ class Category Extends CI_Controller {
 			$this->database->insertCategory($category, $creator);
 		}
 	}
+
+	public function delete($id){
+		$this->load->model('categories_model');
+		$del_item = $this->categories_model->deleteCategory($id);
+		if ($del_item) {
+			$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Category Deleted</div>');
+			redirect(base_url('categories'));
+		}else {
+			$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">Opps Something Went Wrong</div>');
+			redirect(base_url('categories'));
+		}
+	}
 }
 ?>
