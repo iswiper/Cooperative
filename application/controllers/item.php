@@ -22,7 +22,7 @@ class Item extends CI_Controller {
 				$stat = $this->input->post('status');
 				$this->form_validation->set_rules('item_name', 'Item Name', 'required');
 				$this->form_validation->set_rules('description', 'Description', 'required');
-				$this->form_validation->set_rules('stat', 'Status', 'required');
+				$this->form_validation->set_rules('status', 'Status', 'required');
 				if($this->form_validation->run() == FALSE) {
 					$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">'.validation_errors() . '</div>');
 					redirect('inventory');
