@@ -61,9 +61,7 @@
 										'class' => ''
 										);
 
-									echo form_open('item/add_stocks',$attribute); 
-									echo form_fieldset('<h3 class="text-primary">Add Stock/s </h3>');
-									 
+									echo form_open('item/add_stocks',$attribute); 						 
 									echo '<div class="form-group">
 									<label>Stock In</label>
 										<input type="text" name="stocks" class="form-control" placeholder="Enter Stocks To Add">
@@ -73,8 +71,7 @@
 										<input type="submit" class="btn btn-primary" name="submit_stocks" value="Add">
 									</div>
 									'.form_close().'
-									</div>
-
+ 								</div>
 					        </div>
 					      </div>
 					    </div>'	;
@@ -184,7 +181,7 @@
 					$category_tbl = $this->table->add_row($category->id, $category->date_time, $category->category, $category->creator,
 "	<a href='' data-toggle='modal' data-target='#delCAT".$category->id."'><button class='btn btn-info btn-warning btn-sm'>DELETE</button></a>
 						");
-//=============================================================DELETE MODAL==================================================================================//
+//===========================================================DELETE MODAL==================================================================================//
 				echo '<div class="modal fade" id="delCAT'.$category->id.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					      <div class="modal-dialog" role="document">
 					        <div class="modal-content">

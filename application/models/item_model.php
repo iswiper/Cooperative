@@ -1,15 +1,14 @@
 <?php
 class Item_model extends CI_Model {
-	public function insertItem($name, $category, $description, $date_time, $creator, $quantity, $price) 
-	{
-		$data = array(
+	public function insertItem($name, $category, $description, $date_time, $creator, $quantity,$stat)
+	{	$data = array(
 			'name' => "$name",
 			'category' => "$category",
 			'description' => "$description",
 			'date_time' => "$date_time",
 			'creator' => "$creator",
 			'quantities' => "$quantity",
-			'price' =>	"$price"
+			'status' => "$stat"
 			);
 		$this->load->database();
 		$sql = $this->db->insert('items', $data);
