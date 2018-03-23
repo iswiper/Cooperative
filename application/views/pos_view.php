@@ -113,7 +113,7 @@
 
 
 
-<a href="<?php echo base_url('logout/out') ?>"><button style="float: right; margin-top: 6px; margin-right: 20px;" class="btn btn-primary btn-lg" >Sign Out</button></a>
+<a href="<?php echo base_url(); ?>pages2/dash"><button style="float: right; margin-top: 6px; margin-right: 20px;" class="btn btn-primary btn-lg" >Return to Dashboard</button></a>
 	<div style="padding-left: 20px; padding-top: 2px;">
 		
 	</div>

@@ -59,6 +59,7 @@
         'class' => 'form-control',
         'name' => 'stat',
         );
+
       $submitAttr = array(
         'class' => 'btn btn-primary',
         'name' => 'submit_item',
@@ -97,6 +98,11 @@
       echo "</select>";
       echo '</div>';
       
+      //price
+      echo '<div class="form-group">';
+      echo form_label('&emsp;Price:');
+      echo form_input($priceAttr);
+
       //description
       echo '<div class="form-group">';
       echo form_label('&emsp;Description:');

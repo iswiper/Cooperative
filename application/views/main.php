@@ -18,13 +18,13 @@
 				$tableAttr = array(
 					'table_open' => '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">',
 					);
-				$item_table = $this->table->set_heading('No.','Name','Category','Description', 'Quantity', 'Status','Action');
+				$item_table = $this->table->set_heading('No.','Name','Category','Description', 'Quantity','Price', 'Status','Action');
 				$item_table = $this->table->set_template($tableAttr);
 				$num = 0;
 				foreach ($items as $item) {
 					$itemName = urlencode($item->name);
 					$num++;
-					$item_table = $this->table->add_row($item->id, $item->name, $item->category, $item->description,$item->quantities,$item->status,"
+					$item_table = $this->table->add_row($item->id, $item->name, $item->category, $item->description,$item->quantities,$item->price,$item->status,"
 					<a href='' data-toggle='modal' data-target='#stockin".$item->id."'><button class='btn btn-primary btn-sm'>STOCK IN</button></a> 
 					<a href='' data-toggle='modal' data-target='#update".$item->name."'><button class='btn btn-info btn-sm btn-update'>UPDATE</button><input type='hidden' value='".$item->id."'></a> 	
 				<a href='' data-toggle='modal' data-target='#delete".$item->id."'><button class='btn btn-info btn-warning btn-sm'>DELETE</button></a>");
@@ -91,6 +91,7 @@
 			  <input type="hidden" name="current_category" value="'. $item->category.'" >
 			  <input type="hidden" name="current_description" value="'. $item->description.'">
 			  <input type="hidden" name="current_status" value="'. $item->status.'">
+			  <input type="hidden" name="current_price" value="'. $item->price.'">
 			  <div class="form-group">
 			    <label>&emsp;Item Name:</label>
 			    <input type="text" name="update_name" placeholder="Item Name" class="form-control" value="'. $item->name.'">
@@ -116,7 +117,10 @@
 			        } 
 			        echo '</select>
 			  </div>
-			  
+			  <div class="form-group">
+			    <label>&emsp;Price:</label>
+			    <input type="text" name="update_price" placeholder="Item Price" class="form-control" value="'. $item->price.'">
+			  </div>
 			  <div class="form-group">
 			    <label>&emsp;Description:</label>
 			    <textarea name="update_description" class="form-control" rows="5">'. $item->description.'</textarea>
