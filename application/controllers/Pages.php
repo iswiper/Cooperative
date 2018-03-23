@@ -31,7 +31,7 @@ class Pages extends CI_Controller {
 		$this->load->view('sales_report_nav_view');
 		$this->load->view('templates/footeradmin');
 	}
-
+	
 	public function new_item() {
 		$this->load->model('categories_model');
 		$data['category'] = $this->categories_model->getCategoriesName();

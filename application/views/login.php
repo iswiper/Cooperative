@@ -1,6 +1,7 @@
 <div style="min-height: 525px;">
 <div class="row">
 <div class="col-sm-4 col-sm-offset-4" style="padding-top: 80px;">
+<?php echo $this->session->flashdata('errorMessage') ?>
 <?php echo form_open('login_con/login_validation') ?>
 <?php echo form_fieldset('Login user'); ?>
 <div class="input-group form-group">

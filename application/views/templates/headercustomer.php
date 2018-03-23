@@ -15,10 +15,18 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/Admin/vendor/datatables/dataTables.bootstrap4.css');?>" >
   <!-- Custom styles for this template-->
   <link rel="stylesheet" href="<?php echo base_url('assets/Admin/css/sb-admin.css');?>" >
-	  <!-- Favicons -->
-    <link href="<?php echo base_url();?>assets/Home/img/favicon.png" rel="icon">
+	
+  <!-- Favicons -->
+  
+  <link href="<?php echo base_url();?>assets/Home/img/favicon.png" rel="icon">
   
   <link href="<?php echo base_url();?>assets/Home/img/apple-touch-icon.png" rel="apple-touch-icon">
 	
 </head>
-
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!--############################################################################## Navigation ###############################################################################################################-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="">Cooperative Administrator</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
