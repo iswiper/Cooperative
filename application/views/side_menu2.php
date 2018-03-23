@@ -15,17 +15,27 @@
 			?>
       <br>
         <span class="glyphicon glyphicon-user"></span>
+        <h1 style="color:white;" > &nbsp <?php $user=$this->session->userdata('username'); echo $user; ?></h1>
         
       <div>
         <?php 
         foreach ($customer as $row)
         {   
+            echo '<label style="color:white;" > &nbsp&nbsp&nbsp&nbsp Name: '.$row->first_name.' '.$row->last_name.'</label> ';
+            echo '<br><label style="color:white;">&nbsp&nbsp&nbsp&nbsp Email: '.$row->email.'</label>';
             echo '<label>&emsp;Name: </label>'," ",$row->first_name," ",$row->last_name;
             echo '<br><label>&emsp;Email: </label>'," ",$row->email,'</br>' ;
         }
         ?>
       </div>
 	 <!--#############################################dash################################################################################################-->
+        <li class="nav-item " data-toggle="tooltip" data-placement="right" title="Dashboard" >
+          <a class="nav-link " href="<?php echo base_url() ?>pos_con/pos">
+            <i class="fa fa-table"></i><span class="nav-link-text">Buy Now</span>
+          </a>
+        </li>
+
+        <li class="nav-item <?php if ($location === 'dash') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Dashboard" >
       
         <li class="nav-item <?php if ($location === 'pos') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Dashboard" >
           <a class="nav-link <?php if ($location === 'pos') {echo 'active-text';}?>" href="<?php echo base_url("pos") ?>">

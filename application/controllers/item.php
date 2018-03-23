@@ -18,11 +18,12 @@ class Item extends CI_Controller {
 				$description = $this->input->post('description');
 				$creator = 'Cooperative Company';
 				$quantity = 0;
-				//$price = $this->input->post('price');
+				$price = $this->input->post('price');
 				$stat = $this->input->post('status');
 				$this->form_validation->set_rules('item_name', 'Item Name', 'required');
 				$this->form_validation->set_rules('description', 'Description', 'required');
 				$this->form_validation->set_rules('status', 'Status', 'required');
+				$this->form_validation->set_rules('price', 'Price', 'required|integer');
 				if($this->form_validation->run() == FALSE) {
 					$this->session->set_flashdata('errorMessage', '<div class="alert alert-danger">'.validation_errors() . '</div>');
 					redirect('inventory');
@@ -31,7 +32,7 @@ class Item extends CI_Controller {
 					redirect(base_url('inventory'));
 				}else {
 					$this->load->model('item_model');
-					$this->item_model->insertItem($name, $category, $description, $date_time, $creator, $quantity,$stat);
+					$this->item_model->insertItem($name, $category, $description, $date_time, $creator, $quantity,$price,$stat);
 				}
 			}else {
 				redirect(base_url('inventory'));
@@ -88,18 +89,21 @@ class Item extends CI_Controller {
 		$this->form_validation->set_rules('update_name', 'Item Name', 'required');
 		$this->form_validation->set_rules('update_name', 'Item Name', 'required');
 		$this->form_validation->set_rules('update_name', 'Item Name', 'required');
+		$this->form_validation->set_rules('update_name', 'Item Name', 'required');
 		
 		$current_name = $this->input->post('current_name');
 		$current_category = $this->input->post('current_category');
 		$current_description = strtolower($this->input->post('current_description'));
 		$current_status= $this->input->post('current_status');
+		$current_price= $this->input->post('current_price');
 
 		$updated_name = $this->input->post('update_name');
 		$updated_category = $this->input->post('update_category');
 		$updated_desc = strtolower($this->input->post('update_description'));
 		$updated_status = $this->input->post('update_status');
+		$updated_price = $this->input->post('update_price');
 
-		if ($current_name === $updated_name && $current_category === $updated_category && $current_status === $updated_status && $current_description === $updated_desc) {
+		if ($current_name === $updated_name && $current_price === $updated_price && $current_category === $updated_category && $current_status === $updated_status && $current_description === $updated_desc) {
 			$this->session->set_flashdata('successMessage', '<div class="alert alert-info">No Changes</div>');
 					redirect(base_url('inventory'));
 		}else {
@@ -108,7 +112,7 @@ class Item extends CI_Controller {
 					redirect(base_url('inventory'));
 			}else {
 				$this->load->model('item_model');
-				$update = $this->item_model->update_item($id,$updated_name,$updated_category,$updated_desc,$updated_status);
+				$update = $this->item_model->update_item($id,$updated_name,$updated_category,$updated_desc,$updated_status,$updated_price);
 				if ($update) {
 					$this->session->set_flashdata('successMessage', '<div class="alert alert-success">Item Updated</div>');
 					redirect(base_url('inventory'));
