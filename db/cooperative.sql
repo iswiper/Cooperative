@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2018 at 02:54 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
-
--- Generation Time: Mar 22, 2018 at 07:52 PM
+-- Generation Time: Apr 05, 2018 at 03:28 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -69,11 +65,6 @@ CREATE TABLE `category` (
 INSERT INTO `category` (`id`, `date_time`, `category`, `creator`) VALUES
 (1, '2018-03-23 08:43:58 am', 'qwertyuiop', 'Cooperative Company'),
 (2, '2018-03-23 08:44:03 am', 'asdfghjkl', 'Cooperative Company');
-(2, '2018-03-09 10:21:12 am', 'Gel', 'Cooperative Company'),
-(3, '2018-03-15 11:11:09 pm', 'Mango', 'Cooperative Company'),
-(4, '2018-03-18 09:04:58 pm', 'apple', 'Cooperative Company'),
-(5, '2018-03-19 01:05:10 am', 'melon', 'Cooperative Company'),
-(6, '2018-03-20 09:45:22 pm', 'stress reliever', 'Cooperative Company');
 
 -- --------------------------------------------------------
 
@@ -99,17 +90,8 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`id`, `first_name`, `last_name`, `email`, `phone`, `address`, `username`, `password`, `date_created`) VALUES
 (1, 'Lyleee', 'qwertyuiop', 'q@gmail.com', 0, '', 'qwertyuiop', '$2y$10$h13nuK28698rAJq/O6pGsu2pUmriTPOkIJ2PM1kFgDNnxDmz5jvTC', '2018-03-22 09:38:20 pm'),
-(2, 'qwertyuiop', 'qwertyuiop', 'a@gmail.com', 0, '', 'asdfghjkl', '$2y$10$DvTas60TcXSrwuQ0DfOZ0.ovEaGnUGZfYlpcIQ2matP71y5LeurlS', '2018-03-23 09:17:34 am');
-(1, 'qwertyuiop', 'sqqqqqqqqq', 'q@gmail.com', 2147483647, 'sdjsdnklsckcksc', 'qwertyuiop', '$2y$10$niEp9b23Gj1Q86P.AXA7ruY5kOeXYf.AfmDHIii/8SMl9oZGPJIzC', '2018-03-14 06:21:11 pm'),
-(2, 'wwwwwwwwwwww', 'wwwwwwwwwwww', 'w@gmail.com', 2147483647, 'wwwwwwwwwwwwwwww', 'qwertyuiop', '$2y$10$o0bKHU1wXLn8qU.H/LCOYOa1XV4UWed8KY1FDoOluAyp3ilBCm4JK', '2018-03-14 06:26:22 pm'),
-(3, 'wwwwwwwwwwww', 'wwwwwwwwwwww', 'w@gmail.com', 2147483647, 'wwwwwwwwwwwwwwww', 'qwertyuiop111', '$2y$10$IEme.HjSt73SRG5fYHhnrOONFHVj97ZuSBHe2zPFBGIW5JXh6WYDG', '2018-03-14 06:33:48 pm'),
-(4, 'qqqqqqqqqqq', 'wwwwwwww', 'w@gmail.com', 2147483647, 'dwxsxcvfsdf', 'pokoloko', '$2y$10$3CM30RNBujY7pHYo8w6sAe4rBXbvaso9y7spYTYX0O/SITllikfSO', '2018-03-14 06:35:08 pm'),
-(5, 'qqqqqqqqqqq', 'wwwwwwww', 'w@gmail.com', 2147483647, 'dwxsxcvfsdf', 'popopo', '$2y$10$GKjDp7RYdPbB/eSy8Afeb.RnPF0l8XmBMqXyy7OtkDmg4VEHyNFqy', '2018-03-14 06:35:58 pm'),
-(6, 'aaaaaaaaa', 'aaaaaaaa', 'a@gmail.com', 2147483647, 'dddddddddd', 'cocococo', '$2y$10$rGL9j7/c7vTMGr6HFyKE0uwcU/84KidCSoEz0QDGeSY6Nl3svVzw.', '2018-03-14 06:40:16 pm'),
-(7, 'aaaaaaaaa', 'aaaaaaaa', 'a@gmail.com', 2147483647, 'dddddddddd', 'cocococo', '$2y$10$xKYVS0c9Lt6WFEFRum795.DCxL.DcBICEovaTYjQP9QecLN5O6fLi', '2018-03-14 06:41:52 pm'),
-(8, 'DSDSSDS', 'dddddd', 'q@gmail.com', 2147483647, 'dddddddddddddddddddddddddddd', 'master ', '$2y$10$xRSZ9BE0o2cL01ajSGoMXuvhhy4dbfiZk9Es1ZZNIZ.hrE3C6m9P2', '2018-03-14 07:34:47 pm'),
-(9, 'lian Nicoli', 'Paulo', 'lian@gmail.com', 2147483647, 'huakajkjahaha', 'lanpla', '$2y$10$0gi2EsBUNkr0EUOUMOCi0eOPc0fgZC6aSYVIvoQnHWNcJi8NPLCfS', '2018-03-15 11:23:33 pm'),
-(10, 'Nimely', 'Acuna', 'acunanimely@yahoo.com', 2147483647, '3738 dahuihi paru', 'acuna123', '$2y$10$jtkyclOxU35Z/C2ALh2fHufl5aT3FhCx/1aj2VZslbHSogFjRmbWW', '2018-03-16 08:18:32 am');
+(2, 'qwertyuiop', 'qwertyuiop', 'a@gmail.com', 0, '', 'asdfghjkl', '$2y$10$DvTas60TcXSrwuQ0DfOZ0.ovEaGnUGZfYlpcIQ2matP71y5LeurlS', '2018-03-23 09:17:34 am'),
+(3, 'Venjie', 'Mendez', 'bajak@gmail.com', 0, '', 'binje', '$2y$10$zdEKf8jLl1zDCyEfhgB4D.RgzX/W4dWZ3SucFTgEh0e7ffPo8HOZa', '2018-04-02 09:59:37 pm');
 
 -- --------------------------------------------------------
 
@@ -134,13 +116,10 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `category`, `description`, `date_time`, `creator`, `quantities`, `price`, `status`) VALUES
-(12, 'qwert', 'qwertyuiop', 'qwert', '2018-03-21 10:55:18 pm', 'Cooperative Company', 500, 100, 'Disposal'),
+(12, 'qwert', 'qwertyuiop', 'qwert', '2018-03-21 10:55:18 pm', 'Cooperative Company', -60, 100, 'Disposal'),
 (13, 'qwertyuiop', 'qwertyuiop', 'qwertyuio', '2018-03-23 08:44:18 am', 'Cooperative Company', 900, 300, 'Available'),
 (14, 'qweryuio', 'qwertyuiop', 'rsetghij', '2018-03-23 08:48:53 am', 'Cooperative Company', 0, 89, 'Available'),
-(15, 'asdfghjkl', 'qwertyuiop', 'asdfghjkl', '2018-03-23 09:50:02 am', 'Cooperative Company', 444, 44, 'Available'),
-(16, 'venjie', 'qwertyuiop', 'lalaki', '2018-03-23 09:51:33 am', 'Cooperative Company', 0, 123, 'Available');
-(4, 'Mangoooo', 'Mango', 'fruit fruit fruit', '2018-03-21 12:36:57 am', 'Cooperative Company', 1, 0, ''),
-(5, 'ertyuio', 'Gel', 'YUUIOP', '2018-03-21 12:38:50 am', 'Cooperative Company', 0, 0, '');
+(15, 'asdfghjkl', 'qwertyuiop', 'asdfghjkl', '2018-03-23 09:50:02 am', 'Cooperative Company', 432, 44, 'Available');
 
 -- --------------------------------------------------------
 
@@ -174,7 +153,15 @@ INSERT INTO `sales` (`id`, `sale_id`, `date_time`, `item_id`, `item_name`, `item
 (5, 241696246, '2018-03-23 08:52:26', '12', 'qwert', 0, 66, 0, '2018-03-23', '03', '2018', '12'),
 (6, 1484807771, '2018-03-23 09:23:54', '13', 'qwertyuiop', 0, 1, 0, '2018-03-23', '03', '2018', '12'),
 (7, 1871512585, '2018-03-23 09:27:45', '13', 'qwertyuiop', 0, 2, 0, '2018-03-23', '03', '2018', '12'),
-(8, 2109944941, '2018-03-23 09:36:48', '13', 'qwertyuiop', 0, 1, 0, '2018-03-23', '03', '2018', '12');
+(8, 2109944941, '2018-03-23 09:36:48', '13', 'qwertyuiop', 0, 1, 0, '2018-03-23', '03', '2018', '12'),
+(9, 2050528002, '2018-04-02 22:02:47', '16', 'venjie', 123, 19, 2337, '2018-04-02', '04', '2018', '14'),
+(10, 600088043, '2018-04-05 09:01:18', '12', 'qwert', 100, 12, 1200, '2018-04-05', '04', '2018', '14'),
+(11, 335834623, '2018-04-05 09:02:30', '12', 'qwert', 100, 12, 1200, '2018-04-05', '04', '2018', '14'),
+(12, 1652244703, '2018-04-05 09:03:31', '12', 'qwert', 100, 12, 1200, '2018-04-05', '04', '2018', '14'),
+(13, 604050499, '2018-04-05 09:04:17', '12', 'qwert', 100, 12, 1200, '2018-04-05', '04', '2018', '14'),
+(14, 1418061508, '2018-04-05 09:04:30', '12', 'qwert', 100, 12, 1200, '2018-04-05', '04', '2018', '14'),
+(15, 407452018, '2018-04-05 09:24:00', '12', 'qwert', 100, 9, 900, '2018-04-05', '04', '2018', '14'),
+(16, 794047564, '2018-04-05 09:27:23', '15', 'asdfghjkl', 44, 12, 528, '2018-04-05', '04', '2018', '14');
 
 -- --------------------------------------------------------
 
@@ -194,25 +181,7 @@ CREATE TABLE `status` (
 
 INSERT INTO `status` (`id`, `status_name`, `status_description`) VALUES
 (1, 'Available', ''),
-(2, 'Disposal', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `status`
---
-
-CREATE TABLE `status` (
-  `id` int(11) NOT NULL,
-  `status_name` varchar(10) NOT NULL,
-  `status_description` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `status`
---
-
-INSERT INTO `status` (`id`, `status_name`, `status_description`) VALUES
+(2, 'Disposal', ''),
 (1, 'Available', ''),
 (2, 'Disposal', '');
 
@@ -237,8 +206,6 @@ CREATE TABLE `supplier` (
 
 INSERT INTO `supplier` (`id`, `supplier_name`, `product`, `supplier_location`, `contact`, `date_time`) VALUES
 (4, 'asdfghj', 'rfgh', 'edfghjkm', 3546678, 2018);
-(1, 'qwertyuiop', 'qwertyuiop', 'qwertyuiop', 123456789, 2018),
-(2, 'qwertyuiopoiuytrew', 'qwertyuiop', 'qwertyuiuhtrew', 2147483647, 2018);
 
 --
 -- Indexes for dumped tables
@@ -275,12 +242,6 @@ ALTER TABLE `sales`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `status`
---
-ALTER TABLE `status`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `supplier`
 --
 ALTER TABLE `supplier`
@@ -301,46 +262,30 @@ ALTER TABLE `accounts`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `status`
---
-ALTER TABLE `status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `status`
---
-ALTER TABLE `status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
