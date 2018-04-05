@@ -26,7 +26,7 @@
 <?php echo $this->session->flashdata('errorMessage'); ?>
 <div style="padding: 20px;" class="bg-info">
 <h1 class="text-success">Transaction Complete</h1>
-<small class=""><a class="btn btn-warning" href="<?php echo base_url('pos')?>">Return To POS</a></small>
+
 <br>
 <br>
 <div class="row">
@@ -48,6 +48,7 @@
 <div class="col-sm-7">
 	<p class="lead">₱<?php echo $change;?></p>
 </div>
+<small class=""><a class="btn btn-warning" href="<?php echo base_url('pos')?>">Buy another products</a></small>
 </div>
 </div>
 </div>

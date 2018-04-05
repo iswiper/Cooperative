@@ -11,6 +11,6 @@ class Pos_con extends CI_Controller {
 	public function pos(){
 		$this->load->model('item_model');
 		$data['names'] = $this->item_model->get_all_item();
-		$this->load->view('pos_view',$data);
+		$this->load->view('buy_view',$data);
 	}
 }

@@ -2,13 +2,14 @@
 <!--############################################################################## Navigation ###############################################################################################################-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
   
-  <a class="navbar-brand" href="">&emsp;<?php $user=$this->session->userdata('username'); echo $user; ?></a>
+		
+  
      
 	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-<div class="collapse navbar-collapse" id="navbarResponsive">
+	<div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 		<?php
 				$location = $this->uri->segment(1); 
@@ -23,17 +24,12 @@
         {   
             echo '<label style="color:white;" > &nbsp&nbsp&nbsp&nbsp Name: '.$row->first_name.' '.$row->last_name.'</label> ';
             echo '<br><label style="color:white;">&nbsp&nbsp&nbsp&nbsp Email: '.$row->email.'</label>';
-            echo '<label>&emsp;Name: </label>'," ",$row->first_name," ",$row->last_name;
-            echo '<br><label>&emsp;Email: </label>'," ",$row->email,'</br>' ;
+            
         }
         ?>
       </div>
 	 <!--#############################################dash################################################################################################-->
-        <li class="nav-item " data-toggle="tooltip" data-placement="right" title="Dashboard" >
-          <a class="nav-link " href="<?php echo base_url() ?>pos_con/pos">
-            <i class="fa fa-table"></i><span class="nav-link-text">Buy Now</span>
-          </a>
-        </li>
+        
 
         <li class="nav-item <?php if ($location === 'dash') {echo 'active-link';}?>" data-toggle="tooltip" data-placement="right" title="Dashboard" >
       
